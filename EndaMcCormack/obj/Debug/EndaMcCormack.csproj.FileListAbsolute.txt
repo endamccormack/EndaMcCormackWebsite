@@ -46,6 +46,5 @@ C:\Users\Enda\Google Drive\Personal\EndaMcCormack\EndaMcCormack\bin\System.Web.W
 C:\Users\Enda\Google Drive\Personal\EndaMcCormack\EndaMcCormack\bin\System.Web.WebPages.dll
 C:\Users\Enda\Google Drive\Personal\EndaMcCormack\EndaMcCormack\bin\System.Web.WebPages.Razor.dll
 C:\Users\Enda\Google Drive\Personal\EndaMcCormack\EndaMcCormack\bin\EntityFramework.xml
-C:\Users\Enda\Google Drive\Personal\EndaMcCormack\EndaMcCormack\obj\Debug\EndaMcCormack.csprojResolveAssemblyReference.cache
 C:\Users\Enda\Google Drive\Personal\EndaMcCormack\EndaMcCormack\obj\Debug\EndaMcCormack.dll
 C:\Users\Enda\Google Drive\Personal\EndaMcCormack\EndaMcCormack\obj\Debug\EndaMcCormack.pdb
