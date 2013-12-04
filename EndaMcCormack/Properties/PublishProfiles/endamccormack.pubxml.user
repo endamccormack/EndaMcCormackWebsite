@@ -194,7 +194,7 @@ by customizing this MSBuild file. In order to learn more about this please visit
     <File Include="Content/Images/endamccormack/delicius.gif">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
-    <File Include="Content/Images/endamccormack/facebook-icon.gif">
+    <File Include="Content/Images/endamccormack/facebook-icon.png">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Images/endamccormack/favicon.ico">
