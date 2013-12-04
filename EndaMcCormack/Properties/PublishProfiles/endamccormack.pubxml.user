@@ -203,7 +203,7 @@ by customizing this MSBuild file. In order to learn more about this please visit
     <File Include="Content/Images/endamccormack/hammer.png">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
-    <File Include="Content/Images/endamccormack/linkedin.png">
+    <File Include="Content/Images/endamccormack/linkedin.gif">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Images/endamccormack/mainBgPlate.gif">
