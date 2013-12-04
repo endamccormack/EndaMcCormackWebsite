@@ -1,0 +1,28 @@
+#headerText{
+	background-color: white;
+	margin-top: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#headerText .postContent{
+	margin: 0px;
+	padding: 0px;
+}
+div#location p{
+  width:28%; 
+  float:left;
+}
+.smallHeader{
+	font-weight: bold;
+}
+.areaHeader{
+	font-weight: bold;
+	text-align: center;
+}
+#moreInfo p{
+	margin-top: 0px;
+}
+h4{
+	margin-bottom: 0px;
+}

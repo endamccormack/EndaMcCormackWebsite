@@ -1,0 +1,36 @@
+﻿@using EndaMcCormack.Models;
+@model IEnumerable<PortfolioPost>
+
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isAdmin = ViewBag.IsAdmin ?? false;
+    string category = ViewBag.Header;
+    ViewBag.Title = "Portfolio - The Endangered Droid - Enda Mc Cormack";
+    bool isPreviousLinkVisible = ViewBag.isPreviousLinkVisible ?? false;
+    bool isNextLinkVisible = ViewBag.isNextLinkVisible ?? false;
+}
+
+@section PostsCss
+{
+    <link rel="stylesheet" type="text/css" href="@Href("~/Content/css/posts.css")" />
+}
+
+<h1>@category</h1>
+
+@foreach (PortfolioPost p in Model)
+{
+    @PortfolioPostHelper.Render(p, Html, isAdmin); 
+
+}
+
+@if(isPreviousLinkVisible)
+{
+    <a id="previousLink" href="@Href("~/Portfolio/Index/"+ (ViewBag.pageNumber - 1))">&lt;&lt; Previous</a> 
+}
+
+@if (isNextLinkVisible)
+{
+    <a id="nextLink" href="@Href("~/Portfolio/Index/"+ (ViewBag.pageNumber + 1))">Next&gt;&gt;</a> 
+}
+

@@ -1,0 +1,22 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section loginHeader
+{
+    <script type="text/javascript" src="@Href("~/Scripts/js/SHA256.js")"></script>
+    <script type="text/javascript" src="@Href("~/Scripts/js/login.js")"></script>
+}
+
+<h2>Login</h2>
+<form action="@Href("~/Accounts/Login")" method="post" id="loginForm">
+    <input type="text" name="name" id="name" />Name<br />
+    <input type="password" name="password" id="password" /> Password <br />
+    <input type="hidden" name="nonce" id="nonce" value="@Model" />
+    <input type="hidden" name="hash" id="hash" value="hash" />
+    <input type="button"  onclick=" var $ = jquery_1_7_2_min; getPasswordHash('password', 'nonce', 'hash'); $('#loginForm').submit();" value="Login" />
+
+</form>

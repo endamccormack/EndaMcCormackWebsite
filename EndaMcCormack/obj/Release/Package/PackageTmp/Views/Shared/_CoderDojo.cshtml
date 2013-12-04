@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="author" content="Enda Mc Cormack">
+    <meta name="keywords" content="Enda,Mc,Cormack,HTML,CSS,XML,JavaScript,XAML,C#,Objective C,Java,JQuery,Mobile,Web,HTML5,CSS3,SQL Server,UX,UI,Software,Engineer,Ireland,Sligo">
+    <meta name="application-name" content="The Endangered Droid - Enda Mc Cormack">
+    <meta name="viewport" content="width = device-width, initial-scale = 0.1" />
+
+    <title>@ViewBag.Title</title>
+    <script type="text/javascript" src="/Scripts/js/googTrack.js"></script>
+    <link href="../../Content/css/prettify.css" rel="stylesheet" />
+    <script src="../../Scripts/js/jquery-1.7.2.min.js"></script>
+    <script src="../../Scripts/js/prettify.js"></script>    
+    <script src="../../Scripts/js/jquery-ui-1.8.19.custom.min.js"></script>
+	<script type="text/javascript">
+
+
+	    $(document).ready(function () {
+	        $('.itemContents').hide();
+
+	        $('.item').click(function (e) {
+	            var id = e.target.id.replace("Header", "Demo")
+	            var vis = $('#' + id).is(":visible")
+	            $('.itemContents').hide('slow');
+	            $('.item').animate({ "color": "#000000" });
+	            $('#' + e.target.id).animate({ "color": "#007FFF" });
+	            $('.item').css({ "font-weight": "100" });
+	            $('#' + e.target.id).css({ "font-weight": "bold" });
+	            $('.itemContents').css({ "color": "#000" });
+
+	            if (vis) {
+	                $('#' + e.target.id).animate({ "color": "#000" });
+	                $('#' + e.target.id).css({ "font-weight": "100" });
+	                $('#' + id).show();
+	            }
+	            else {
+	                $('#' + id).toggle('slow');
+	            }
+	        });
+	    });
+	</script>
+
+	<style type="text/css">
+	body{
+	 	background-color: #007FFF;
+	 	margin: 0px;
+		font-family: segoe ui, ubuntu;
+	}
+	#wrapper{
+		width: 80%;
+		margin-left: 10%;
+		margin-right: -10%;
+		background-color: white;	
+		padding: 10px;
+		padding-top: 0px;
+		//text-shaddow: 2px 2px #000;
+	}
+	.header1{
+		text-align: center;
+		color: #007FFF;
+		font-size: 2em;
+	}
+	.header3{
+		color: #007FFF;
+		font-size: 1.17em;
+	}
+	.header4{
+		color: #007FFF;
+		font-size: 1em;
+	}
+	#footer{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		color: white;
+	}
+	xmp{
+		margin:0px;
+	}
+	.indentForViewing{
+		margin: 0px;
+		margin-left: 100px;
+	}
+	.demo{
+		border: solid 1px #888;
+	}
+	.moreInfo{
+		margin-bottom: 40px;
+	}
+    .moreInfo a{
+		color: red;
+	}
+    .moreInfo a:hover{
+		color: #007FFF;
+	}
+    pre {
+         white-space: pre-wrap;       /* css-3 */
+         white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+         white-space: -pre-wrap;      /* Opera 4-6 */
+         white-space: -o-pre-wrap;    /* Opera 7 */
+         word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+	ul {
+        margin: 0px;
+	}
+
+
+	</style>
+</head>
+<body>
+    <div id="wrapper">
+        <ul>
+        @RenderBody()
+        </ul>
+    </div>
+</body>
+</html>

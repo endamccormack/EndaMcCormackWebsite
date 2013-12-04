@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0711560F-1A0A-4608-A093-87BBCD80BB52}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EndaMcCormack</RootNamespace>
+    <AssemblyName>EndaMcCormack</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=1.0.11220.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Nuget.Core.1.0.1120.104\lib\net40\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPages.Core.1.0.20105.407\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetMvc.3.0.20105.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\System.Web.Providers.Core.1.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetRazor.Core.1.0.20105.407\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPages.Core.1.0.20105.407\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Administration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPages.1.0.20105.407\lib\net40\System.Web.WebPages.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPages.Core.1.0.20105.407\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPages.Core.1.0.20105.407\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\CoderDojoController.cs" />
+    <Compile Include="Controllers\MyBlogController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Models\FeedResutlt.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Controllers\TutorialsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\blogModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>blogModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\css\columns.css" />
+    <Content Include="Content\css\crappyIE.css" />
+    <Content Include="Content\css\desert.css" />
+    <Content Include="Content\css\index.css" />
+    <Content Include="Content\css\styles.css" />
+    <Content Include="Content\css\wide.css" />
+    <Content Include="Content\Images\CoderDojo\bg.gif" />
+    <Content Include="Content\Images\CoderDojo\CaraMcGinley.jpg" />
+    <Content Include="Content\Images\CoderDojo\coder-dojo-students.jpg" />
+    <Content Include="Content\Images\CoderDojo\coder-dojo.png" />
+    <Content Include="Content\Images\CoderDojo\EndaMcCormack.jpg" />
+    <Content Include="Content\Images\CoderDojo\facebook.png" />
+    <Content Include="Content\Images\CoderDojo\favicon.ico" />
+    <Content Include="Content\Images\CoderDojo\favicon.png" />
+    <Content Include="Content\Images\CoderDojo\googlegroups.png" />
+    <Content Include="Content\Images\CoderDojo\header-bg.gif" />
+    <Content Include="Content\Images\CoderDojo\header.gif" />
+    <Content Include="Content\Images\CoderDojo\ITSligoFish.jpg" />
+    <Content Include="Content\Images\CoderDojo\MaryLoftus.jpg" />
+    <Content Include="Content\Images\CoderDojo\twitter.png" />
+    <Content Include="Content\Images\endamccormack\me\2c8058a.jpg" />
+    <Content Include="Content\Images\endamccormack\me\DSCN0536.JPG" />
+    <Content Include="Content\Images\endamccormack\me\Enda on wall.jpg" />
+    <Content Include="Content\Images\endamccormack\me\IMG_20120713_220803.jpg" />
+    <Content Include="Content\Images\endamccormack\me\IMG_20120717_171916.jpg" />
+    <Content Include="Models\blogModel.edmx.sql" />
+    <Content Include="Scripts\blogLoad.js" />
+    <Content Include="Scripts\ColumnBuilder.js" />
+    <Content Include="Scripts\columnPageLoad.js" />
+    <Content Include="Scripts\googleMapsApiCode.js" />
+    <Content Include="Scripts\pageLoad.js" />
+    <Content Include="Scripts\sponsorsBuilder.js" />
+    <Content Include="Views\Shared\_CoderDojo.cshtml" />
+    <Content Include="Views\CoderDojo\TheKitchenSink.cshtml" />
+    <Content Include="Views\CoderDojo\CreateHeader.cshtml" />
+    <Content Include="Views\CoderDojo\EditHeader.cshtml" />
+    <Content Include="Views\CoderDojo\CreateContent.cshtml" />
+    <Content Include="Views\CoderDojo\EditContent.cshtml" />
+    <Content Include="Views\CoderDojo\CreateSubject.cshtml" />
+    <Content Include="Views\CoderDojo\EditSubject.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\blogs.css" />
+    <Content Include="Content\css\contact.css" />
+    <Content Include="Content\css\home.css" />
+    <Content Include="Content\css\lightbox.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\portfolio.css" />
+    <Content Include="Content\css\posts.css" />
+    <Content Include="Content\css\prettify.css" />
+    <Content Include="Content\css\Style.css" />
+    <Content Include="Content\Images\CoderDojo\coder-dojo-sligo.png" />
+    <Content Include="Content\Images\CoderDojo\CoderDojo.3gp" />
+    <Content Include="Content\Images\CoderDojo\coderDojoSmall.gif" />
+    <Content Include="Content\Images\endamccormack\blog.png" />
+    <Content Include="Content\Images\endamccormack\bullet-robo-head.gif" />
+    <Content Include="Content\Images\endamccormack\bullet.png" />
+    <Content Include="Content\Images\endamccormack\contactImages\contactCompleteImage.gif" />
+    <Content Include="Content\Images\endamccormack\contactImages\contactCompleteImage.png" />
+    <Content Include="Content\Images\endamccormack\contactImages\facebookRound.png" />
+    <Content Include="Content\Images\endamccormack\contactImages\gPlusRound.png" />
+    <Content Include="Content\Images\endamccormack\contactImages\linkedInRound.png" />
+    <Content Include="Content\Images\endamccormack\contactImages\twitterRound.png" />
+    <Content Include="Content\Images\endamccormack\delicius.gif" />
+    <Content Include="Content\Images\endamccormack\facebook-icon.gif" />
+    <Content Include="Content\Images\endamccormack\favicon.ico" />
+    <Content Include="Content\Images\endamccormack\hammer.png" />
+    <Content Include="Content\Images\endamccormack\linkedin.png" />
+    <Content Include="Content\Images\endamccormack\mainBgPlate.gif" />
+    <Content Include="Content\Images\endamccormack\mainBgPlate.png" />
+    <Content Include="Content\Images\endamccormack\mainBgPlate2.png" />
+    <Content Include="Content\Images\endamccormack\mainSiteLogo.png" />
+    <Content Include="Content\Images\endamccormack\me.jpg" />
+    <Content Include="Content\Images\endamccormack\me.png" />
+    <Content Include="Content\Images\endamccormack\metal.jpg" />
+    <Content Include="Content\Images\endamccormack\nav-enda-mccormack\blog.png" />
+    <Content Include="Content\Images\endamccormack\nav-enda-mccormack\contact.png" />
+    <Content Include="Content\Images\endamccormack\nav-enda-mccormack\home.png" />
+    <Content Include="Content\Images\endamccormack\nav-enda-mccormack\portfolio.png" />
+    <Content Include="Content\Images\endamccormack\nav-enda-mccormack\tutorials.png" />
+    <Content Include="Content\Images\endamccormack\PortfolioImages\design.jpg" />
+    <Content Include="Content\Images\endamccormack\PortfolioImages\others.jpg" />
+    <Content Include="Content\Images\endamccormack\PortfolioImages\software.jpg" />
+    <Content Include="Content\Images\endamccormack\PortfolioImages\web.jpg" />
+    <Content Include="Content\Images\endamccormack\postMetal.png" />
+    <Content Include="Content\Images\endamccormack\rgbBar.png" />
+    <Content Include="Content\Images\endamccormack\robo-arm.gif" />
+    <Content Include="Content\Images\endamccormack\RoboHead.png" />
+    <Content Include="Content\Images\endamccormack\Untitled-5.png" />
+    <Content Include="Content\Images\endamccormack\work.png" />
+    <Content Include="Content\Images\endamccormack\workAndCollege.png" />
+    <Content Include="Content\Images\javascriptSem22012\1.png" />
+    <Content Include="Content\Images\javascriptSem22012\2.png" />
+    <Content Include="Content\Images\javascriptSem22012\3.png" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\ART.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\assessments.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\attendance.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\christmas exams.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\engineering.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\exams no talk.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\fees forever-alone.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\learning outcomes meme.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\articleImages\librarians.jpg" />
+    <Content Include="Content\Images\javascriptSem22012\bg.gif" />
+    <Content Include="Content\Images\javascriptSem22012\bg1.gif" />
+    <Content Include="Content\Images\javascriptSem22012\contentPixil.png" />
+    <Content Include="Content\Images\javascriptSem22012\fbg.gif" />
+    <Content Include="Content\Images\javascriptSem22012\flameWar.mp4" />
+    <Content Include="Content\Images\javascriptSem22012\left.png" />
+    <Content Include="Content\Images\javascriptSem22012\leftClear.png" />
+    <Content Include="Content\Images\javascriptSem22012\logo.png" />
+    <Content Include="Content\Images\javascriptSem22012\Rick Astley - Never Gonna Give You Up.mp3" />
+    <Content Include="Content\Images\javascriptSem22012\right.png" />
+    <Content Include="Content\Images\javascriptSem22012\rightClear.png" />
+    <Content Include="Content\Images\javascriptSem22012\website logo.png" />
+    <Content Include="Content\Images\lightbox\bg-checker.png" />
+    <Content Include="Content\Images\lightbox\bullet.gif" />
+    <Content Include="Content\Images\lightbox\close.png" />
+    <Content Include="Content\Images\lightbox\loading.gif" />
+    <Content Include="Content\Images\lightbox\next.png" />
+    <Content Include="Content\Images\lightbox\prev.png" />
+    <Content Include="Content\Images\others\endanger.png" />
+    <Content Include="Content\Images\others\firefox.png" />
+    <Content Include="Content\Images\others\IMG_20120606_103841.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\js\googTrack.js" />
+    <Content Include="Scripts\js\jquery-1.5.min.js" />
+    <Content Include="Scripts\js\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\js\jquery-easing-compatibility.js" />
+    <Content Include="Scripts\js\jquery-easing.js" />
+    <Content Include="Scripts\js\jquery-ui-1.8.19.custom.min.js" />
+    <Content Include="Scripts\js\jquery-ui-1.8.22.custom.min.js" />
+    <Content Include="Scripts\js\lang-css.js" />
+    <Content Include="Scripts\js\lightbox.js" />
+    <Content Include="Scripts\js\login.js" />
+    <Content Include="Scripts\js\nav.js" />
+    <Content Include="Scripts\js\portfolioScript.js" />
+    <Content Include="Scripts\js\preload.js" />
+    <Content Include="Scripts\js\prettify.js" />
+    <Content Include="Scripts\js\SHA256.js" />
+    <Content Include="Scripts\js\validateContact.js" />
+    <Content Include="Scripts\js\validateForm.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\blogModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>blogModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\PortfolioPostHelper.cshtml" />
+    <Content Include="App_Code\PostHelper.cshtml" />
+    <Content Include="App_Code\TutorialPostHelper.cshtml" />
+    <Content Include="App_Code\sitemap.xml" />
+    <Content Include="App_Code\CoderDojoContentHelper.cshtml" />
+    <None Include="Models\blogModel.edmx.diagram">
+      <DependentUpon>blogModel.edmx</DependentUpon>
+    </None>
+    <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\MyBlog\Details.cshtml" />
+    <Content Include="Views\MyBlog\dIndex.cshtml" />
+    <Content Include="Views\MyBlog\Edit.cshtml" />
+    <Content Include="Views\MyBlog\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Portfolio\Category.cshtml" />
+    <Content Include="Views\Portfolio\Index.cshtml" />
+    <Content Include="Views\Tutorials\Details.cshtml" />
+    <Content Include="Views\Tutorials\dIndex.cshtml" />
+    <Content Include="Views\Tutorials\Edit.cshtml" />
+    <Content Include="Views\Tutorials\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\endamccormack.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="sitemap\sitemap.xml" />
+    <Content Include="Views\Portfolio\Details.cshtml" />
+    <Content Include="Views\Portfolio\Edit.cshtml" />
+    <Content Include="Views\Home\AddSkill.cshtml" />
+    <Content Include="Views\CoderDojo\KitchenSink.cshtml" />
+    <Content Include="Views\CoderDojo\index.cshtml" />
+    <Content Include="Views\CoderDojo\test.cshtml" />
+    <Content Include="Views\CoderDojo\DojoIndex.cshtml" />
+    <Content Include="Views\CoderDojo\DojoContact.cshtml" />
+    <Content Include="Views\CoderDojo\DojoBlog.cshtml" />
+    <Content Include="Views\CoderDojo\DojoNinja.cshtml" />
+    <Content Include="Views\CoderDojo\DojoSensai.cshtml" />
+    <Content Include="Views\CoderDojo\DojoSponsor.cshtml" />
+    <Content Include="Views\CoderDojo\DojoTutorials.cshtml" />
+    <Content Include="Views\CoderDojo\KitchenSinkCSS.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54127</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62461/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

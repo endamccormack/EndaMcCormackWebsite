@@ -1,0 +1,15 @@
+﻿@model EndaMcCormack.Models.Post
+
+@{
+    ViewBag.Title = "Blog - The Endangered Droid - Enda Mc Cormack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isAdmin = ViewBag.IsAdmin ?? false;
+}
+@section PostsCss
+{
+    <link rel="stylesheet" type="text/css" href="@Href("~/Content/css/posts.css")" />
+}
+<h2>Details</h2>
+
+@PostHelper.Render(Model, Html, isAdmin, true)
+

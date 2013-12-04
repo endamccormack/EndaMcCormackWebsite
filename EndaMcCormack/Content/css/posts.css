@@ -1,0 +1,124 @@
+﻿div.blogPost {
+    background: #212962;
+    border: 2px solid #C0E5FC;
+    border-radius: 7px; 
+    padding: 10px;
+    -moz-box-shadow:    0px 0px 10px #000;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    box-shadow:         0px 0px 10px #000;
+    margin: 20px;
+    margin-bottom: 50px;
+    
+    line-height: 1.1em;
+}
+div.postHeader a {
+    font-size: 30px;
+  
+}
+div.postInfo { 
+   background-color: #3b5f92;
+    background-size: cover;
+    
+    border: 1px solid #C0E5FC;
+    
+    -moz-box-shadow:    inset 0px 0px 10px #000;
+    -webkit-box-shadow: inset 0px 0px 10px #000;
+    box-shadow:         inset 0px 0px 10px #000;
+    
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.textfield    {
+	border-radius: 3px;
+	font-size: 12px;
+	color: #333333;
+	width: 100%;
+}
+div#main div.blogPost {
+    clear: both;
+}
+div#main div.blogPost div.mainPost a {
+    background-color: #3b5f92;
+}
+div#main div.blogPost div.mainPost div.postHeader {
+    text-align: center;
+    margin-top: 20px; 
+    
+    width: 70%;
+    
+    background-color: #3b5f92;
+    
+    padding: 10px;
+    
+    -moz-box-shadow:    inset 0px 0px 10px #000;
+    -webkit-box-shadow: inset 0px 0px 10px #000;
+    box-shadow:         inset 0px 0px 10px #000;
+    
+    border: 1px solid #C0E5FC;
+}
+div#main div.blogPost div.mainPost div.postHeader a 
+{
+    color: inherit;
+    
+    background-color: transparent;
+    font-size: 40px;
+    font-style: normal;
+}
+div#main div.blogPost div.mainPost {
+    width: auto;
+    
+}
+div#main div.blogPost div.postInfo {
+    float: right;
+    width: 20%;
+    text-align: right;
+    
+    text-shadow: -1px -1px #000;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+    padding: 10px;
+    
+}
+div#main div.blogPost div.postInfo a {
+    background-color: #212962;
+    text-shadow: -1px -1px #000;
+}
+div#main div.blogPost div.postInfo div.socialButton {
+    float: right; 
+}
+div#main div.blogPost div.postInfo a.db-anchor {
+    background-color: transparent;
+    color: transparent;    
+    text-shadow: none;
+}
+a#nextLink {
+    font-size: xx-large;
+}
+a#previousLink {
+    font-size: xx-large;
+}
+div#postCommentContainer {   
+    width: 60%;
+    text-align: left; 
+    padding: 10px;
+ 
+    -moz-box-shadow:    inset 0px 0px 10px #000;
+    -webkit-box-shadow: inset 0px 0px 10px #000;
+    box-shadow:         inset 0px 0px 10px #000;       
+}
+div#postCommentContainer a {  
+    background-color: #3b5f92;
+    color: white;
+}
+span span iframe {
+    right:  350px;
+}
+div.socialButton iframe {
+    height: 44px;
+}
+
+

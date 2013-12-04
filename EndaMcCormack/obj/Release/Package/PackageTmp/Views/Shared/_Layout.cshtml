@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Enda Mc Cormack">
+    <meta name="keywords" content="Enda,Mc,Cormack,HTML,CSS,XML,JavaScript,XAML,C#,Objective C,Java,JQuery,Mobile,Web,HTML5,CSS3,SQL Server,UX,UI,Software,Engineer,Ireland,Sligo">
+    <meta name="application-name" content="The Endangered Droid - Enda Mc Cormack">
+    <meta name="viewport" content="width = device-width, initial-scale = 0.1" />
+    <title>@ViewBag.Title</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/Content/css/main.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/Content/Images/endamccormack/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/Content/Images/endamccormack/favicon.ico" type="image/x-icon"/>
+    <link href="/Content/css/lightbox.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/Scripts/js/googTrack.js"></script>
+    <script type="text/javascript" src="/Scripts/js/jquery-1.5.min.js"></script>
+    <script type="text/javascript" src="/Scripts/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript"> jquery_1_7_2_min = $.noConflict(true); </script>
+    <script type="text/javascript" src="/Scripts/js/jquery-easing-compatibility.js"></script>
+    <script type="text/javascript" src="/Scripts/js/jquery-easing.js"></script>
+    <script type="text/javascript" src="/Scripts/js/jquery-ui-1.8.19.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript"> var jquery_1_5 = $.noConflict(true); </script>
+    <script type="text/javascript" src="/Scripts/js/nav.js"></script>
+    <script type="text/javascript" src="/Scripts/js/lightbox.js"></script>
+
+    @RenderSection("loginHeader", false)
+    @RenderSection("PostsCss", false)
+    @RenderSection("HomeCss", false)
+    @RenderSection("BlogCss", false)
+    @RenderSection("PortfolioCss", false)
+    @RenderSection("PortfolioEditCss", false)
+    @RenderSection("ContactCss", false)
+    @RenderSection("TutorialCss", false)
+
+</head>
+
+<body>
+
+    @if(ViewBag.Title == "Home - The Endangered Droid - Enda Mc Cormack")
+    {
+        <div style="position:fixed;">
+            <div  class="g-plusone" data-size="tall" data-annotation="none" data-href="http://www.enda-mccormack.com"></div><br />
+            <a href="../CoderDojo/index"><img src="../../Content/Images/CoderDojo/coder-dojo-sligo.png" style="width: 32px; height:32px;" /></a>
+        </div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+            (function () {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        
+    } 
+
+    <div id="colorfulEyes">
+            <div id="header">
+                <div id="navBorder">
+                    <div id="nav">
+                        <ul>
+                            <li id="portfolioNav"><a href="@Href("~/Portfolio")">Portfolio</a></li>
+                            <li id="blogNav"><a href="@Href("~/MyBlog")">Blog</a></li>
+                            <li id="homeNav" ><a href="@Href("~/Home")">Home</a></li>
+                            <li id="contactNav"><a href="@Href("~/Contact")">Contact</a></li>
+                            <li id="tutorialsNav"><a href="@Href("~/Tutorials")">Tutorials</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainWrapper">
+            <div id="leftArm"></div>
+            <div id="rightArm"></div>
+            <div id="main">
+                <div  id="imgMainLogo" ></div>
+                <div id="content">
+                    <div id="mainContent"> 
+                        @RenderBody()
+                     </div>
+            </div>
+        </div>
+            <div id="footer">
+                <div id="roboLeg"><div id="legSeparator"></div></div>
+                <div id="roboToesNav">
+                    <a class="toe" id="toTop">Back To Top</a>
+                    <a class="toe" href="@Href("~/Tutorials")">Tutorials</a>
+                    <a class="toe" href="@Href("~/Contact")">Contact</a>
+                    <a class="toe" href="@Href("~/Home")">Home</a>
+                    <a class="toe" href="@Href("~/MyBlog")">Blog</a>
+                    <a class="toe" href="@Href("~/Portfolio")">Portfolio</a>
+                </div> 
+            </div>
+        </div>
+        <p id="copyright">Developed and Copyright © 2012  Enda Mc Cormack</p>
+</body>
+</html>

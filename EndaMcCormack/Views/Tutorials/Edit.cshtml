@@ -1,0 +1,23 @@
+﻿@model EndaMcCormack.Models.TutorialPost
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<form action="@Href("~/Portfolio/Update")" method="post" id="postForm">
+    @if (Model.ID != -1)
+    {
+        <input type="hidden" name="ID" value="@Model.ID" />
+    }
+
+    @{DateTime dateTime = Model.DateTime.Year >2000 ? Model.DateTime : DateTime.Now;}
+
+    <input type="text" name="DateTime" value="@dateTime" /> Date <br />
+    <input type="text" name="Title" value="@Model.Title" /> Title <br />
+    <input type="text" name="Tags" value="@ViewBag.Tags" /> Tags <br />
+    <textarea name="Body" cols="40" rows="10" >@Model.Body</textarea>
+    <input type="submit" name="submit" value="Submit" />
+
+</form>

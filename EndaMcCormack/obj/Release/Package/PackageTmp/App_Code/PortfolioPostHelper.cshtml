@@ -1,0 +1,52 @@
+﻿@using EndaMcCormack.Models;
+
+@helper Render(PortfolioPost post, System.Web.Mvc.HtmlHelper html, bool isAdmin)
+{
+    <div class="blogPost">
+
+        <div class="postInfo">
+            <div class="postDate">
+                <strong>Date:</strong><div class="Month">@post.DateTime.ToString("MMM").ToUpper() @post.DateTime.ToString("dd")</div>
+                <div class="Day"></div>
+            </div><br />
+            <strong> Tags:</strong>
+            <div class="postTags">
+                @foreach (PortfolioTag t in post.PortfolioTags)
+                {
+                    <span><a href="@Href("~/Portfolio/Tags/" + t.Name)" target="_blank">@t.Name</a></span>   
+                }<br />
+            </div>
+
+            <strong>Related Links:</strong>
+            <div class="postLink">
+                @foreach (PortfolioLink l in post.PortfolioLinks)
+                {
+                    <span><a href="@l.Link" target="_blank">@l.Name</a></span>   
+                }<br />
+            </div>
+
+            <strong>Related Files:</strong>
+            <div class="postLink">
+                @foreach (PortfolioFile f in post.PortfolioFiles)
+                {
+                    <span><a href="@f.Link" target="_blank">@f.Name</a></span>   
+                }<br />
+            </div>
+                
+            
+            @if(isAdmin)
+            {
+                <div class="postControlPanel">
+                    <a href="@Href("~/Portfolio/Delete/" + post.ID)">Delete</a>
+                    <a href="@Href("~/Portfolio/Edit/" + post.ID)">Edit</a>
+                </div>
+            }
+        </div>
+         
+
+        <div class="mainPost">        
+            <div class="postHeader"><a href="@Href("~/Portfolio/Details/" + post.ID)">@post.Title</a></div><br/>
+            <div class="postBody">@html.Raw(post.Body)</div><br />
+        </div>    
+    </div>       
+}       

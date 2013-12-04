@@ -1,0 +1,130 @@
+body{
+	
+	margin: 0px;
+	font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", sans-serif;
+	background-image: url(/Content/Images/CoderDojo/bg.gif);
+	background-repeat: repeat;
+}
+
+div#header img {
+	border: none;
+	float: left;
+
+}
+div#backgroundWrapper{
+	background: url(/Content/Images/CoderDojo/header-bg.gif);
+	background-repeat: repeat-x;
+}
+div#wrapper{
+	width: 80%;
+	margin-left: 10%;
+    margin-right: -10%;
+	min-width: 1000px;
+}
+div#header{
+	height: 150px;
+}
+span#socialIcons{
+	float: right;
+}
+span#socialIcons a img{
+	margin-right: 3px;
+	width: 32px;
+	margin-top: 5px;
+}
+div#navBar{
+	margin: 0px;
+	height: 44px;
+	margin-top: 57px;
+	margin-left: 230px;
+	position: absolute;
+	font-size: 14px;
+	min-width: 781px;
+
+}
+div#navBar span#navlinks{
+	float: left;
+}
+div#navBar span#navlinks a{
+	float: left;
+	margin-right:20px;
+	//background-color: #323232;
+	height: 20px;
+	vertical-align: middle;
+	padding: 7px;
+	border-radius: 12px;
+	color: eeeeee;
+	text-decoration: none;
+	//box-shadow: inset 0px 0px 5px #000;
+}
+/*
+#navBar span#siteName{
+	float: left;
+	margin-right:20px;
+	//background-color: #323232;
+	height: 20px;
+	vertical-align: middle;
+	padding-top: 7px;
+	//border-radius: 12px;
+	color: #ff0000;
+	text-decoration: none;
+	//box-shadow: 0px 0px 5px #000;
+	font-weight: bold;
+	font-size: 18px;
+	//text-shadow: -2px -2px #000000;
+	text-shadow: 1px 1px white, -1px -1px #444;
+}
+*/
+div#navBar span#navlinks a:hover{
+	//box-shadow: 0px 0px 5px #f00;
+	color: red;
+}
+
+h3{
+	color: red;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+a{
+	color: red;
+}
+h1{
+	color:red;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+}
+#tutorials  #navBar span#navlinks a#tutorialsLink,
+#index #navBar span#navlinks a#indexLink,
+#blog #navBar span#navlinks a#blogLink,
+#sensai #navBar span#navlinks a#sensaiLink,
+#ninja #navBar span#navlinks a#ninjaLink,
+#contact #navBar span#navlinks a#contactLink,
+#sponsor #navBar span#navlinks a#sponsorLink{
+	//box-shadow: 0px 0px 5px #f00;
+	color: red;
+}
+
+p.name{
+	color: red;
+	font-size: 22px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

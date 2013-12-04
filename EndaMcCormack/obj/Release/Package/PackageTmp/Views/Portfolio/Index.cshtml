@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Portfolio - The Endangered Droid - Enda Mc Cormack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section PortfolioCss
+{
+    <link rel="stylesheet" type="text/css" href="@Href("~/Content/css/portfolio.css")" />
+    <script type="text/javascript" src="@Href("~/Scripts/js/portfolioScript.js")" ></script>
+}
+
+
+
+        <script type="text/javascript">
+
+
+    </script>
+<h1>Portfolio</h1>
+
+
+
+                        <p>Welcome to my portfolio page. Here you can delve
+
+                            deeper into work I have done in some of the areas of my interests.
+
+                            You may find a fixture of the same project in different sections but
+
+                            its just the relevant parts of the same project in its relevant section.
+                        </p>
+
+                        <div id="sections">  
+                                <div id="soft" class="portfolioSection" onClick="javascript:location.href='@Url.Action("Category", "Portfolio", new { category = "Software", page = 0 })'" style='background-image: url("Content/Images/endamccormack/portfolioImages/software.jpg");'>
+                                    <div id="softBlank" class="blankSpace"></div>
+
+                                    <div id="softCap" class="caption"> <h1>SOFTWARE</h1><br /> Here is my software section of my
+
+                                        portfolio. Here you can find some relevant portfolio information for software that I 
+
+                                        program. This includes any programming done on software, apps, websites etc. There will also 
+
+                                        be content to some of the tutorials I do in here if they are relevant.
+
+                                    </div>
+
+                                </div>
+
+                            <div id="web" class="portfolioSection" onclick="javascript:location.href='@Url.Action("Category", "Portfolio", new { category = "Web", page = 0 })'" style='background-image: url("Content/Images/endamccormack/portfolioImages/web.jpg");'>
+
+                                <div id="webBlank" class="blankSpace"></div>
+                                <div id="webCap" class="caption"> <h1>WEB</h1><br /> Here is my web section of my porfolio.
+                                    Here you can find some relevant portfolio information for some websites that I have
+                                    made with for myself or on contract. Some sites wont be in here by request of the client
+                                    There will also be content to some of the tutorials I do in here if they are relevant.
+                                </div>
+                            </div>
+
+                            <div id="design" class="portfolioSection" onclick="javascript:location.href='@Url.Action("Category", "Portfolio", new { category = "Design", page = 0 })'" style='background-image: url("Content/Images/endamccormack/portfolioImages/design.jpg");'>
+                                <div id="designBlank" class="blankSpace"></div>
+                                <div id="designCap" class="caption"> <h1>DESIGN</h1><br /> Here is my design section of my portfolio.
+                                    Here you can find some relevant portfolio information for some of the design work I have done,
+                                    I always have understood the importance of design and how if you dont bother with it no one will
+                                    use your product. Here is some of the work I have done in design.
+                                </div>
+                            </div>
+
+                            <div id="others" class="portfolioSection" onclick="javascript:location.href='@Url.Action("Category", "Portfolio", new { category = "Others", page = 0 })'" style='background-image: url("Content/Images/endamccormack/portfolioImages/others.jpg");'>
+                                <div id="othersBlank" class="blankSpace"></div>
+                                <div id="othersCap" class="caption"> <h1>OTHERS</h1><br />Here is my others section of my portfolio.
+                                    This will include all the relevant docs like my C.V and other notable achievements other than what
+                                    are included in the other categories. There may also be some of my systems work in here.
+                                    Everything else of importance not covered in the other categories will be here.
+                                </div>
+                            </div>
+                        </div>
+
+                        <p id="outro">If you have any helpful feedback on this page, please get in <a href="@Href("~/Contact")">Contact</a> with me</p>

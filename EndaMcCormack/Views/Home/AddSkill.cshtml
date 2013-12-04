@@ -1,0 +1,17 @@
+﻿@using EndaMcCormack.Models
+@model Skill
+
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.ID != null)
+{
+    <input type="hidden" id="id" name="id" value="@Model.ID"/> 
+}
+<h2>AddSkill</h2>
+<form action="@Href("~/Home/AddSkill")" method="post" id="postForm">
+    <input type="text" id="name" name="name" value="@Model.Name" />Name <br />
+    <textarea id="desc" name="desc" rows="8" cols="60">@Model.Body</textarea> Description <br />
+    <input type="submit" name="submit" value="Submit" />
+</form>

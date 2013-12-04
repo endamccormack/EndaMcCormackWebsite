@@ -1,0 +1,48 @@
+﻿@using EndaMcCormack.Models;
+
+@helper Render(Header head, System.Web.Mvc.HtmlHelper html, string admin)
+{
+    
+				<p class="header3"><!-- Header goes here  -->@head.Header1</p>
+                if (admin == "k3nny")
+                {
+                    <a href="/CoderDojo/editHeader/@head.id">Edit header</a>
+                }
+                
+                <!--for goes here-->
+                foreach (Content c in head.Contents)
+                {
+                     <li class="item" id="@string.Format("{0}Header", c.id)">@c.Name</li><br/>
+    
+			        <div class="itemContents" id="@string.Format("{0}Demo", c.id)">
+                        <p>@c.Description</p>
+                        @if (c.hasLooksLike)
+                        {
+                            <p class="header4">Looks like</p>
+				            <div class="demo">
+                                @html.Raw(c.Code)
+				            </div>
+                        }
+
+                        @if (c.hasCode)
+                        {
+				        <p class="header4">Code</p>
+				        <div class="code">
+					        <pre class="prettyprint lang-html linenums">
+@c.Code
+					        </pre>
+				        </div>
+                        }
+                        @if(c.hasMoreInfo)
+                        {
+                        <p class="header4">More info</p>
+                        <p  class="moreInfo">@html.Raw(c.MoreInfo)</p>
+                        }
+                        @if (admin == "k3nny")
+                        {
+                            <a href="/CoderDojo/editContent/@c.id">Edit content</a>
+                        }
+			        </div>
+                    
+                }		
+}       

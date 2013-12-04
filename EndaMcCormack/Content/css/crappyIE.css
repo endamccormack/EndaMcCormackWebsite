@@ -1,0 +1,92 @@
+
+.column-ribbon-back-left,
+.column-ribbon-back-right,
+.column-ribbon-edge-topleft,
+.column-ribbon-edge-topright,
+.column-ribbon-edge-bottomleft,
+.column-ribbon-edge-bottomright,
+.column-ribbon-edge-topright2,
+.ribbon-back-left,
+.ribbon-back-right,
+.ribbon-edge-topleft,
+.ribbon-edge-topright,
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright,
+.ribbon-edge-topright2 {
+  display: none;
+}
+
+.ribbon-front,
+.column-ribbon-front{
+  height: 32px;
+  margin-left: 10px;
+  margin-right: -10px;
+  width: 100%;
+}
+
+  div#navBar span#navlinks a{
+  float: left;
+  margin-right:20px;
+  background-color: transparent;
+  height: 20px;
+  vertical-align: middle;
+  padding: 7px;
+  border-radius: 0px;
+  color: eeeeee;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.ribbonLeft{
+
+  width: 44%;
+  float: right;
+  color: white;
+}
+.ribbonLeft p{
+
+}
+
+.ribbonCenter{
+  width: 10%;
+  float: right;
+}
+
+.ribbonRight{
+  width: 44%;
+  float: right;
+  color: white;
+}
+.ribbonRight p{
+}
+.columnRibbonLeft p{
+
+}
+
+.columnRibbonCenter{
+  width: 20%;
+  float: right;
+}
+
+.columnRibbonRight{
+  width: 40%;
+  float: right;
+  color: white;
+}
+
+.columnArticle .postContent img{
+  width: 100%;
+}
+
+div#navBar{
+  margin-left: 0px;
+}
+div#wrapper{
+
+  margin-left: 10%;
+  margin-right: -10%;
+}
+div#location p{
+  width: 25%;
+  float:left;
+}

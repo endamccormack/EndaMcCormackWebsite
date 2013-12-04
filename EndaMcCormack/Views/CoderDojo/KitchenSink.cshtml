@@ -1,0 +1,817 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+	<title>HTML Kitchen sink</title>
+    <link href="../../Content/css/prettify.css" rel="stylesheet" />
+    <script src="../../Scripts/js/jquery-1.7.2.min.js"></script>
+    <script src="../../Scripts/js/prettify.js"></script>    
+
+    <script src="../../Scripts/js/jquery-ui-1.8.19.custom.min.js"></script>
+	<script type="text/javascript">
+
+	    $(document).ready(function () {
+	        $('.itemContents').hide();
+
+	        $('.item').click(function (e) {
+	            var id = e.target.id.replace("Header", "Demo")
+	            var vis = $('#' + id).is(":visible")
+	            $('.itemContents').hide('slow');
+	            $('.item').animate({ "color": "#000000" });
+	            $('#' + e.target.id).animate({ "color": "#007FFF" });
+	            $('.item').css({ "font-weight": "100" });
+	            $('#' + e.target.id).css({ "font-weight": "bold" });
+	            $('.itemContents').css({ "color": "#000" });
+
+	            if (vis) {
+	                $('#' + e.target.id).animate({ "color": "#000" });
+	                $('#' + e.target.id).css({ "font-weight": "100" });
+	                $('#' + id).show();
+	            }
+	            else {
+	                $('#' + id).toggle('slow');
+	            }
+	        });
+	    });
+	</script>
+
+	<style type="text/css">
+	body{
+	 	background-color: #007FFF;
+	 	margin: 0px;
+		font-family: segoe ui, ubuntu;
+	}
+	#wrapper{
+		width: 80%;
+		margin-left: 10%;
+		margin-right: -10%;
+		background-color: white;	
+		padding: 10px;
+		padding-top: 0px;
+		//text-shaddow: 2px 2px #000;
+	}
+	.header1{
+		text-align: center;
+		color: #007FFF;
+		font-size: 2em;
+	}
+	.header3{
+		color: #007FFF;
+		font-size: 1.17em;
+	}
+	.header4{
+		color: #007FFF;
+		font-size: 1em;
+	}
+	#footer{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		color: white;
+	}
+	xmp{
+		margin:0px;
+	}
+	.indentForViewing{
+		margin: 0px;
+		margin-left: 100px;
+	}
+	.demo{
+		border: solid 1px #888;
+	}
+	.moreInfo{
+		margin-bottom: 40px;
+	}
+    .moreInfo a{
+		color: red;
+	}
+    .moreInfo a:hover{
+		color: #007FFF;
+	}
+    pre {
+         white-space: pre-wrap;       /* css-3 */
+         white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+         white-space: -pre-wrap;      /* Opera 4-6 */
+         white-space: -o-pre-wrap;    /* Opera 7 */
+         word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+
+	</style>
+</head>
+<body onload="prettyPrint()">
+
+	<div id="wrapper">
+		<ul>
+            <center><img style="width:100px;" src="../../Content/Images/CoderDojo/coder-dojo-sligo.png" /></center>
+			<p class="header1">Welcome to the Kitchen Sink</p>
+			<p style="text-align: center;">This is pretty much everything thats important in standard HTML even <a href="http://idioms.thefreedictionary.com/everything+but+the+kitchen+sink">the kitchen sink</a></p>
+
+			<!-- This is a comment -->
+			<!-- This is where the real coding starts -->
+			
+            <p class="header3">Click bullet point to expand</p>
+			<p class="header3">Layout</p>
+
+			<li class="item" id="htmlHeader">Basic layout of a HTML page - HTML</li><br/>
+			<div class="itemContents" id="htmlDemo">
+				<p>
+					The HTML tag is the bases for all web pages basically, you always need it, you use it as follows.
+				</p>
+				<div>
+					<div class="code">
+						<p class="header4">Code</p>
+
+						<pre class="prettyprint lang-html ">
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;this is the title for the page, it shows up at the top of your browser&lt;/title&gt;<br />
+&lt;/head&gt;
+&lt;body&gt;
+	this is the body, you put everything you want the person to see in here<br />
+&lt;/body&gt;
+&lt;/html&gt;
+						</pre>
+					</div>
+				</div>
+                <p class="header4">More info</p>
+                <p  class="moreInfo"><a href="http://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a></p>
+			</div>
+
+			<li class="item" id="divHeader">Divider - div</li><br/>
+			<div class="itemContents" id="divDemo">
+				<p>
+					The divider or "div" tag is used to break up your page into parts. For example if you had a news website which was made up of different articles then each article would have its own div.
+				</p>
+				<div>
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<div>
+							<h3>Coder dojo Sligo students take over the world</h3>
+							<p>
+								Cras sed risus lacus, nec iaculis tortor. Duis rutrum turpis eu velit posuere eu eleifend lorem semper. In hac habitasse platea dictumst. Maecenas porta varius lacus in scelerisque. Mauris libero arcu, eleifend ut dignissim porttitor, tincidunt ut odio. Sed vel neque neque, vitae posuere nunc. Morbi semper, magna eu mattis aliquam, quam ligula feugiat quam, id congue est quam sit amet diam. Morbi tempus metus at nisi eleifend accumsan. Suspendisse sem ante, scelerisque non gravida quis, rhoncus ut turpis.
+							</p>
+						</div>
+
+						<div>
+							<h3>Coder Dojo student levels improving every week</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique placerat libero nec malesuada. Aliquam purus neque, congue sed laoreet vel, accumsan non mauris. Donec eget ullamcorper lectus. Donec lobortis sapien eu nisl posuere eu dignissim augue rhoncus. In accumsan lectus eu augue lobortis ultricies. Etiam nulla nisl, cursus et adipiscing at, elementum sed justo. Nunc ornare rhoncus augue, non faucibus metus molestie in. Morbi vitae lacus eros, in porta neque. In nec diam pretium magna pretium semper. Suspendisse nunc nibh, egestas quis feugiat quis, congue in odio.
+							</p>
+						</div>
+					</div>
+					<div class="code">
+						<p class="header4">Code</p>
+
+						<pre class="prettyprint lang-html ">
+							<xmp>
+<div>
+	<h3>Coder dojo Sligo students take over the world</h3>
+	<p>
+		Cras sed risus lacus, nec iaculis tortor. Duis rutrum turpis eu velit posuere eu
+		 eleifend lorem semper. In hac habitasse platea dictumst. Maecenas porta varius 
+		 lacus in scelerisque. Mauris libero arcu, eleifend ut dignissim porttitor, 
+		 tincidunt ut odio. Sed vel neque neque, vitae posuere nunc. Morbi semper, 
+		 magna eu mattis aliquam, quam ligula feugiat quam, id congue est quam sit 
+		 amet diam. Morbi tempus metus at nisi eleifend accumsan. Suspendisse sem 
+		 ante, scelerisque non gravida quis, rhoncus ut turpis.
+	</p>
+</div>
+
+<div>
+	<h3>Coder Dojo student levels improving every week</h3>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique
+		placerat libero nec malesuada. Aliquam purus neque, congue sed laoreet vel,
+		accumsan non mauris. Donec eget ullamcorper lectus. Donec lobortis sapien
+		eu nisl posuere eu dignissim augue rhoncus. In accumsan lectus eu augue 
+		lobortis ultricies. Etiam nulla nisl, cursus et adipiscing at, elementum 
+		sed justo. Nunc ornare rhoncus augue, non faucibus metus molestie in. Morbi
+		vitae lacus eros, in porta neque. In nec diam pretium magna pretium semper.
+		Suspendisse nunc nibh, egestas quis feugiat quis, congue in odio.
+	</p>
+</div>
+							</xmp>
+						</pre>
+					</div>
+				</div>
+                <p class="header4">More info</p>
+                <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+			</div>
+
+				<li class="item" id="pHeader">Parapraph - p</li><br/>
+                
+				<div class="itemContents" id="pDemo">
+                <p>
+					The p tag is the paragraph tag, it is used when you want to separate a part of your page into paragraphs
+				</p>
+				<p class="header4">Looks like</p>
+					<div class="demo">
+						<div>
+							<h3>Coder Dojo student levels improving every week</h3>
+							<p>
+								This is paragraph 1
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique
+								placerat libero nec malesuada. Aliquam purus neque, congue sed laoreet vel,
+								accumsan non mauris. Donec eget ullamcorper lectus. Donec lobortis sapien
+								eu nisl posuere eu dignissim augue rhoncus. In accumsan lectus eu augue 
+								lobortis ultricies. Etiam nulla nisl, cursus et adipiscing at, elementum 
+								sed justo. Nunc ornare rhoncus augue, non faucibus metus molestie in. Morbi
+								vitae lacus eros, in porta neque. In nec diam pretium magna pretium semper.
+								Suspendisse nunc nibh, egestas quis feugiat quis, congue in odio.
+							</p>
+							<p>
+								This is paragraph 2
+								Cras sed risus lacus, nec iaculis tortor. Duis rutrum turpis eu velit posuere eu
+								 eleifend lorem semper. In hac habitasse platea dictumst. Maecenas porta varius 
+								 lacus in scelerisque. Mauris libero arcu, eleifend ut dignissim porttitor, 
+								 tincidunt ut odio. Sed vel neque neque, vitae posuere nunc. Morbi semper, 
+								 magna eu mattis aliquam, quam ligula feugiat quam, id congue est quam sit 
+								 amet diam. Morbi tempus metus at nisi eleifend accumsan. Suspendisse sem 
+								 ante, scelerisque non gravida quis, rhoncus ut turpis.
+							</p>
+						</div>
+					</div>
+
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp>
+<div>
+    <h3>Coder Dojo student levels improving every week</h3>
+    <p>
+	    This is paragraph 1
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique
+	    placerat libero nec malesuada. Aliquam purus neque, congue sed laoreet vel,
+	    accumsan non mauris. Donec eget ullamcorper lectus. Donec lobortis sapien
+	    eu nisl posuere eu dignissim augue rhoncus. In accumsan lectus eu augue 
+	    lobortis ultricies. Etiam nulla nisl, cursus et adipiscing at, elementum 
+	    sed justo. Nunc ornare rhoncus augue, non faucibus metus molestie in. Morbi
+	    vitae lacus eros, in porta neque. In nec diam pretium magna pretium semper.
+	    Suspendisse nunc nibh, egestas quis feugiat quis, congue in odio.
+    </p>
+    <p>
+	    This is paragraph 2
+	    Cras sed risus lacus, nec iaculis tortor. Duis rutrum turpis eu velit posuere eu
+ 	    eleifend lorem semper. In hac habitasse platea dictumst. Maecenas porta varius 
+ 	    lacus in scelerisque. Mauris libero arcu, eleifend ut dignissim porttitor, 
+	    tincidunt ut odio. Sed vel neque neque, vitae posuere nunc. Morbi semper, 
+	    magna eu mattis aliquam, quam ligula feugiat quam, id congue est quam sit 
+	    amet diam. Morbi tempus metus at nisi eleifend accumsan. Suspendisse sem 
+	    ante, scelerisque non gravida quis, rhoncus ut turpis.
+    </p>
+</div>
+							</xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_p.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="spanHeader">Span - span</li><br/>
+				<div class="itemContents" id="spanDemo">
+                    <p>The span tag is used when you have a "span" of text you want to change, exampe say perhaps in the middle 
+                        of a paragraph you have some text and you want to just change its text and not affect the rest of the paragraph.
+                        then you just surround that text with a span tag and give it a style
+                    </p>
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<div>
+							<p>
+								This is paragraph 2
+								Cras sed risus lacus, nec iaculis tortor. Duis rutrum turpis eu velit posuere eu
+							 	eleifend lorem semper. In hac habitasse platea dictumst. Maecenas porta varius 
+							 	lacus in scelerisque. Mauris libero arcu, eleifend ut dignissim porttitor, 
+								tincidunt ut odio. Sed vel neque neque, <span style="color:red;">This is a span, it is of text 
+								that I wanted to edit apart from the rest of the text</span>. Morbi semper, 
+								magna eu mattis aliquam, quam ligula feugiat quam, id congue est quam sit 
+								amet diam. Morbi tempus metus at nisi eleifend accumsan. Suspendisse sem 
+								ante, scelerisque non gravida quis, rhoncus ut turpis.
+							</p>
+						</div>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp>
+<div>
+	<p>
+		This is paragraph 2
+		Cras sed risus lacus, nec iaculis tortor. Duis rutrum turpis eu velit posuere eu
+	 	eleifend lorem semper. In hac habitasse platea dictumst. Maecenas porta varius 
+	 	lacus in scelerisque. Mauris libero arcu, eleifend ut dignissim porttitor, 
+		tincidunt ut odio. Sed vel neque neque, 
+
+		<span style="color:red;">This is a span, it is of text that I wanted to edit apart from the
+		 rest of the text</span>. 
+
+		Morbi semper, 
+		magna eu mattis aliquam, quam ligula feugiat quam, id congue est quam sit 
+		amet diam. Morbi tempus metus at nisi eleifend accumsan. Suspendisse sem 
+		ante, scelerisque non gravida quis, rhoncus ut turpis.
+	</p>
+</div>
+						</xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_span.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="formHeader">Form - form</li><br/>
+				<div class="itemContents" id="formDemo">
+                    <p>A form is for taking information from the user, if you use any type of input you should surround it with a form tag</p>
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<form>
+							email:<input type="text"/><br/>
+							<input type="submit" value="submit"/>
+						</form>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp>
+<form>
+	email:<input type="text"/><br/>
+	<input type="submit" value="submit"/>
+</form>
+							</xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+			
+
+
+
+
+
+
+
+				<p class="header3" >Text</p>
+
+				<li class="item" id="liHeader">Important text - strong</li><br/>
+				<div class="itemContents" id="liDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<strong>This is li text</strong>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp><strong>This is li text</strong></xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="boldHeader">Bold tag - b</li><br/>
+				<div class="itemContents" id="boldDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<b>This is bold text</b>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp><b>This is bold text</b></xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="italicsHeader">Italics tag - i</li><br/>
+				<div class="itemContents" id="italicsDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<i>This is italic text</i>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp><i>This is italic text</i></xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="underlineHeader">Underline tag - u</li><br/>
+				<div class="itemContents" id="underlineDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<u>This is underlined text</u>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp><u>This is underlined text</u></xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="centerHeader">Center tag - center</li><br/>
+				<div class="itemContents" id="centerDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo" >
+						<center>This is centered text</center>
+					</div>
+					<p class="header4">Code</p>
+					<pre class="prettyprint lang-html ">
+						<div class="code">
+							<xmp><center>This is centered text</center></xmp>
+						</div>
+					</pre>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="hHeader">Header tags - h1 to h6</li><br/>
+				<div class="itemContents" id="hDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<h1>Header 1</h1> <br/>
+						<h2>Header 2</h2> <br/>
+						<h3>Header 3</h3> <br/>
+						<h4>Header 4</h4> <br/>
+						<h5>Header 5</h5> <br/>
+						<h6>Header 6</h6> <br/>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp>
+<h1>Header 1</h1> <br/>
+<h2>Header 2</h2> <br/>
+<h3>Header 3</h3> <br/>
+<h4>Header 4</h4> <br/>
+<h5>Header 5</h5> <br/>
+<h6>Header 6</h6> <br/>
+							</xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="hrHeader"> Horizontal rule - hr</li><br/>
+				<div class="itemContents" id="hrDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<hr/>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><hr/></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="aHeader">Anchor(link) - a</li><br/>
+				<div class="itemContents" id="aDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<a href="http://coderdojosligo.wordpress.com/">Coder Dojo Sligo Wordpress</a>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><a href="http://coderdojosligo.wordpress.com/">Coder Dojo Sligo Wordpress</a></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="brHeader">Next line - br</li><br/>
+				<div class="itemContents" id="brDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						some 
+						text<br/>
+						some 
+						more 
+						text</br>
+						Other
+						text
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp>
+some 
+text<br/>
+some 
+more 
+text</br>
+Other
+text
+							</xmp>
+						</pre>
+					</div>
+				</div>
+
+				<li class="item" id="fontHeader">Font - font</li><br/>
+				<div class="itemContents" id="fontDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<font size=7>font size=7</font>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp><font size=7>font size=7</font></xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+			
+			
+
+
+
+
+
+
+			
+				<p class="header3">Components</p>
+				<li class="item" id="tableHeader">Table tag - table</li><br/>
+				<div class="itemContents" id="tableDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<table border=1 bordercolor=black>
+							<tr>
+								<th>Row 1 Column 1 HEADER </th>
+								<th>Row 1 Column 2 HEADER</th>
+							</tr>
+							<tr>
+								<td>Row 2 Column 1</td>
+								<td>Row 2 Column 2</td>
+							</tr>
+							<tr>
+								<td>Row 3 Column 1</td>
+								<td>Row 3 Column 2</td>
+							</tr>
+							<tr>
+								<td>Row 4 Column 1</td>
+								<td>Row 4 Column 2</td>
+							</tr>
+						</table>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html ">
+							<xmp>
+<table border=1 bordercolor=black>
+	<!--THIS IS A COMMENT NOT HTML tr = table row, th = table header, td = table data -->
+	<tr>
+		<th>Row 1 Column 1 HEADER </th>
+		<th>Row 1 Column 2 HEADER</th>
+	</tr>
+	<tr>
+		<td>Row 2 Column 1</td>
+		<td>Row 2 Column 2</td>
+	</tr>
+	<tr>
+		<td>Row 3 Column 1</td>
+		<td>Row 3 Column 2</td>
+	</tr>
+	<tr>
+		<td>Row 4 Column 1</td>
+		<td>Row 4 Column 2</td>
+	</tr>
+</table>
+							</xmp>
+						</pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li  class="item" id="embedHeader">Embed - embed</li><br/>
+				<div class="itemContents" id="embedDemo">
+					<p class="header4">Looks like</p>
+						<embed src="../../Content/Images/CoderDojo/CoderDojo.3gp" />
+                        <a href="../../Content/Images/CoderDojo/CoderDojo.3gp">link to video file</a>
+					<div class="demo">
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp>
+
+<p class="header4">Looks like</p>
+	<embed src="../../Content/Images/CoderDojo/CoderDojo.3gp" >
+    <a href="../../Content/Images/CoderDojo/CoderDojo.3gp">link to video file</a>
+<div class="demo">
+						</xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="imageHeader">image - img</li><br/>
+				<div class="itemContents" id="imageDemo">
+					<p class="header4">Looks like</p>
+						<img src="../../Content/Images/CoderDojo/coder-dojo-sligo.png" alt="This text shows if the image does not load"/>
+					<div class="demo">
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><img src="../../Content/Images/CoderDojo/coder-dojo-sligo.png" alt="This text shows if the image does not load"/></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>	
+			
+
+
+
+
+
+
+
+
+			<div>
+				<p class="header3">Lists</p>
+				<li class="item" id="ulHeader">Unordered List - ul</li><br/>
+				<div class="itemContents" id="ulDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<ul>
+							<li>List item 1</li>
+							<li>List item 2</li>
+							<li>List item 3</li>
+							<li>List item 4</li>
+						</ul>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp>
+<ul>
+	<li>List item 1</li>
+	<li>List item 2</li>
+	<li>List item 3</li>
+	<li>List item 4</li>
+</ul>
+						</xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="olHeader">Ordered List - ol</li><br/>
+				<div class="itemContents" id="olDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+						<ol>
+							<li>List item 1</li>
+							<li>List item 2</li>
+							<li>List item 3</li>
+							<li>List item 4</li>
+						</ol>
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp>
+<ol>
+	<li>List item 1</li>
+	<li>List item 2</li>
+	<li>List item 3</li>
+	<li>List item 4</li>
+</ol>
+						</xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+			
+
+
+
+
+
+
+	
+				<p class="header3" >Form tags</p>
+				<li class="item" id="buttonHeader"> - button</li><br/>
+				<div class="itemContents" id="buttonDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><li> - ol</li><br/></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="inputHeader"> - input</li><br/>
+				<div class="itemContents" id="inputDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><li> - ol</li><br/></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="labelHeader"> - label</li><br/>
+				<div class="itemContents" id="labelDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><li> - ol</li><br/></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+				
+				<li class="item" id="textareaHeader"> - textarea</li><br/>
+				<div class="itemContents" id="textareaDemo">
+					<p class="header4">Looks like</p>
+					<div class="demo">
+					</div>
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><li> - ol</li><br/></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+		
+
+		
+
+				<p class="header3">Styling and Scripting</p>
+
+				<li class="item" id="scriptHeader">Javascript - Script</li><br/>
+				<div class="itemContents" id="scriptDemo">
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint "><xmp>
+<!-- Internal Javascript -->
+<script type="text/javascript">
+
+    function doSomething() {
+        alert('something');
+    }
+
+</script>
+
+<!-- OR -->
+
+<!-- External Javascript file -->
+<script type="text/javascript" src="jquery.js"></script>
+						</xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="styleHeader">Internal styles - Style</li><br/>
+				<div class="itemContents" id="styleDemo">
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp>
+<style type="text/css">
+
+body{
+	background-color: #007FFF;
+}
+
+</style>
+						</xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+				<li class="item" id="linkHeader">External styles and more - Link</li><br/>
+				<div class="itemContents" id="linkDemo">
+					<p class="header4">Code</p>
+					<div class="code">
+						<pre class="prettyprint lang-html "><xmp><link rel="stylesheet" type="text/css" href="styles.css"></xmp></pre>
+					</div>
+                    <p class="header4">More info</p>
+                    <p  class="moreInfo"><a href="http://www.w3schools.com/tags/tag_div.asp" target="_blank">W3Schools</a></p>
+				</div>
+
+		</ul>
+		
+	</div>
+	<div id="footer">Brought to you by Enda Mc Cormack and Coder Dojo Sligo, Ireland</div>
+
+</body>
+</html>

@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+
+by customizing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121.
+
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaul0cHwl1kGfaRakU15erAAAAAACAAAAAAAQZgAAAAEAACAAAADhwnO1dCVXPEYd7clPOCV0BZaMQ3NTp0ZkyQIQxvn2hAAAAAAOgAAAAAIAACAAAACjTeUm83HY5WGXaXvqfBtfZtR8jHXPQVmYLhch0/WkSCAAAAAjFBc3Q8xAshilnhx2rQNgkQ5jxBCrvLWzKNvI2l3dkUAAAACdufdhHew7ASbhWbrz+6flvEDFeFC2AVDYPYQWM3zHb8HIq71MCMcbhYLT/17HEjFvuHDti33vQ7q8zvLh+C+V</EncryptedPassword>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Code/CoderDojoContentHelper.cshtml">
+      <publishTime>03/02/2013 17:10:42</publishTime>
+    </File>
+    <File Include="App_Code/PortfolioPostHelper.cshtml">
+      <publishTime>02/11/2012 22:38:07</publishTime>
+    </File>
+    <File Include="App_Code/PostHelper.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="App_Code/sitemap.xml">
+      <publishTime>03/11/2012 02:07:42</publishTime>
+    </File>
+    <File Include="App_Code/TutorialPostHelper.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="App_Code/Web.sitemap">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/EndaMcCormack.dll">
+      <publishTime>03/02/2013 17:12:35</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/NuGet.Core.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Administration.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/css/blogs.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/css/columns.css">
+      <publishTime>03/02/2013 04:58:39</publishTime>
+    </File>
+    <File Include="Content/css/contact.css">
+      <publishTime>08/10/2012 00:11:20</publishTime>
+    </File>
+    <File Include="Content/css/crappyIE.css">
+      <publishTime>03/02/2013 04:58:39</publishTime>
+    </File>
+    <File Include="Content/css/desert.css">
+      <publishTime>01/02/2013 23:39:30</publishTime>
+    </File>
+    <File Include="Content/css/home.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/css/index.css">
+      <publishTime>03/02/2013 04:58:39</publishTime>
+    </File>
+    <File Include="Content/css/lightbox.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/css/main.css">
+      <publishTime>03/02/2013 02:08:57</publishTime>
+    </File>
+    <File Include="Content/css/portfolio.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/css/posts.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/css/prettify.css">
+      <publishTime>01/02/2013 05:00:14</publishTime>
+    </File>
+    <File Include="Content/css/Style.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/css/styles.css">
+      <publishTime>08/02/2013 01:39:42</publishTime>
+    </File>
+    <File Include="Content/css/wide.css">
+      <publishTime>03/02/2013 04:58:39</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/bg.gif">
+      <publishTime>03/02/2013 04:58:10</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/CaraMcGinley.jpg">
+      <publishTime>03/02/2013 04:58:10</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/coder-dojo-sligo.png">
+      <publishTime>01/02/2013 05:19:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/coder-dojo-students.jpg">
+      <publishTime>03/02/2013 05:32:24</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/coder-dojo.png">
+      <publishTime>03/02/2013 04:58:10</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/CoderDojo.3gp">
+      <publishTime>01/02/2013 05:19:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/coderDojoSmall.gif">
+      <publishTime>01/02/2013 05:20:03</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/EndaMcCormack.jpg">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/facebook.png">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/favicon.ico">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/favicon.png">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/googlegroups.png">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/header-bg.gif">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/header.gif">
+      <publishTime>07/02/2013 02:22:01</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/ITSligoFish.jpg">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/MaryLoftus.jpg">
+      <publishTime>03/02/2013 05:12:19</publishTime>
+    </File>
+    <File Include="Content/Images/CoderDojo/twitter.png">
+      <publishTime>03/02/2013 05:12:20</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/blog.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/bullet-robo-head.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/bullet.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/contactImages/contactCompleteImage.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/contactImages/contactCompleteImage.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/contactImages/facebookRound.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/contactImages/gPlusRound.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/contactImages/linkedInRound.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/contactImages/twitterRound.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/delicius.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/facebook-icon.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/favicon.ico">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/hammer.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/linkedin.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/mainBgPlate.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/mainBgPlate.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/mainBgPlate2.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/mainSiteLogo.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/me.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/me.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/me/2c8058a.jpg">
+      <publishTime>03/02/2013 04:33:06</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/me/DSCN0536.JPG">
+      <publishTime>03/02/2013 04:43:31</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/me/Enda on wall.jpg">
+      <publishTime>03/02/2013 04:45:20</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/me/IMG_20120713_220803.jpg">
+      <publishTime>03/02/2013 04:44:15</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/me/IMG_20120717_171916.jpg">
+      <publishTime>03/02/2013 04:43:47</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/metal.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/nav-enda-mccormack/blog.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/nav-enda-mccormack/contact.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/nav-enda-mccormack/home.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/nav-enda-mccormack/portfolio.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/nav-enda-mccormack/tutorials.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/PortfolioImages/design.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/PortfolioImages/others.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/PortfolioImages/software.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/PortfolioImages/web.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/postMetal.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/rgbBar.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/robo-arm.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/RoboHead.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/Untitled-5.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/work.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/endamccormack/workAndCollege.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/1.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/2.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/3.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/ART.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/assessments.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/attendance.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/christmas exams.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/engineering.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/exams no talk.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/fees forever-alone.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/learning outcomes meme.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/articleImages/librarians.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/bg.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/bg1.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/contentPixil.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/fbg.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/flameWar.mp4">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/left.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/leftClear.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/logo.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/Rick Astley - Never Gonna Give You Up.mp3">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/right.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/rightClear.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/javascriptSem22012/website logo.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/lightbox/bg-checker.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/lightbox/bullet.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/lightbox/close.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/lightbox/loading.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/lightbox/next.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/lightbox/prev.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/others/chrome.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/others/endanger.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/others/firefox.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Images/others/IMG_20120606_103841.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="desktop.ini">
+      <publishTime>02/02/2013 04:14:38</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/blogLoad.js">
+      <publishTime>07/02/2013 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/ColumnBuilder.js">
+      <publishTime>07/02/2013 12:15:31</publishTime>
+    </File>
+    <File Include="Scripts/columnPageLoad.js">
+      <publishTime>03/02/2013 04:59:04</publishTime>
+    </File>
+    <File Include="Scripts/googleMapsApiCode.js">
+      <publishTime>07/02/2013 12:19:58</publishTime>
+    </File>
+    <File Include="Scripts/js/googTrack.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-1.5.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-1.7.2.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-easing-compatibility.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-easing.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-ui-1.8.19.custom.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-ui-1.8.22.custom.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/lang-css.js">
+      <publishTime>02/01/2013 05:00:37</publishTime>
+    </File>
+    <File Include="Scripts/js/lightbox.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/login.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/nav.js">
+      <publishTime>03/02/2013 02:06:23</publishTime>
+    </File>
+    <File Include="Scripts/js/portfolioScript.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/preload.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/prettify.js">
+      <publishTime>02/01/2013 05:00:47</publishTime>
+    </File>
+    <File Include="Scripts/js/SHA256.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/validateContact.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/js/validateForm.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/pageLoad.js">
+      <publishTime>03/02/2013 04:59:04</publishTime>
+    </File>
+    <File Include="Scripts/sponsorsBuilder.js">
+      <publishTime>03/02/2013 04:59:04</publishTime>
+    </File>
+    <File Include="sitemap/sitemap.xml">
+      <publishTime>03/11/2012 21:37:54</publishTime>
+    </File>
+    <File Include="sitemap/web.sitemap">
+      <publishTime>03/11/2012 01:54:52</publishTime>
+    </File>
+    <File Include="Views/Accounts/Login.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/CreateContent.cshtml">
+      <publishTime>01/02/2013 21:56:12</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/CreateHeader.cshtml">
+      <publishTime>01/02/2013 21:55:25</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/CreateSubject.cshtml">
+      <publishTime>01/02/2013 21:57:07</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/DojoBlog.cshtml">
+      <publishTime>07/02/2013 12:07:43</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/DojoContact.cshtml">
+      <publishTime>03/02/2013 05:52:01</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/DojoIndex.cshtml">
+      <publishTime>07/02/2013 12:16:59</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/DojoNinja.cshtml">
+      <publishTime>07/02/2013 12:11:05</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/DojoSensai.cshtml">
+      <publishTime>03/02/2013 05:51:42</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/DojoSponsor.cshtml">
+      <publishTime>03/02/2013 15:53:19</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/DojoTutorials.cshtml">
+      <publishTime>07/02/2013 12:10:36</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/EditContent.cshtml">
+      <publishTime>01/02/2013 21:56:47</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/EditHeader.cshtml">
+      <publishTime>01/02/2013 21:55:50</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/EditSubject.cshtml">
+      <publishTime>01/02/2013 21:57:21</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/index.cshtml">
+      <publishTime>03/02/2013 05:48:39</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/KitchenSink.cshtml">
+      <publishTime>01/02/2013 17:36:06</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/test.cshtml">
+      <publishTime>01/02/2013 18:50:00</publishTime>
+    </File>
+    <File Include="Views/CoderDojo/TheKitchenSink.cshtml">
+      <publishTime>03/02/2013 17:03:28</publishTime>
+    </File>
+    <File Include="Views/Contact/Index.cshtml">
+      <publishTime>02/11/2012 23:29:13</publishTime>
+    </File>
+    <File Include="Views/Home/AddSkill.cshtml">
+      <publishTime>01/10/2012 00:49:32</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/02/2013 04:48:45</publishTime>
+    </File>
+    <File Include="Views/MyBlog/desktop.ini">
+      <publishTime>11/03/2012 02:07:05</publishTime>
+    </File>
+    <File Include="Views/MyBlog/Details.cshtml">
+      <publishTime>02/11/2012 23:29:36</publishTime>
+    </File>
+    <File Include="Views/MyBlog/dIndex.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/MyBlog/Edit.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/MyBlog/Index.cshtml">
+      <publishTime>02/11/2012 23:29:23</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Category.cshtml">
+      <publishTime>02/11/2012 23:30:01</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Details.cshtml">
+      <publishTime>02/11/2012 23:30:09</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Edit.cshtml">
+      <publishTime>02/11/2012 23:12:50</publishTime>
+    </File>
+    <File Include="Views/Portfolio/Index.cshtml">
+      <publishTime>02/11/2012 23:29:55</publishTime>
+    </File>
+    <File Include="Views/Shared/desktop.ini">
+      <publishTime>11/03/2012 02:07:05</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Shared/_CoderDojo.cshtml">
+      <publishTime>02/02/2013 13:23:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/02/2013 05:21:28</publishTime>
+    </File>
+    <File Include="Views/Tutorials/Details.cshtml">
+      <publishTime>02/11/2012 23:29:50</publishTime>
+    </File>
+    <File Include="Views/Tutorials/dIndex.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Tutorials/Edit.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Tutorials/Index.cshtml">
+      <publishTime>02/11/2012 23:29:43</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/02/2013 01:40:10</publishTime>
+    </File>
+    <File Include="web.sitemap">
+      <publishTime>11/03/2012 01:54:52</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

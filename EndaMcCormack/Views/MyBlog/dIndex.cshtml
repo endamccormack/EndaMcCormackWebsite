@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Blog - The Endangered Droid";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section blogCss
+{
+    <link rel="stylesheet" type="text/css" href="@Href("~/Content/css/blogs.css")" />
+}
+
+<h1>Blog</h1>
+<p style="text-align: center">This is not exactly finished yet but in the mean time
+    here is a <a href="http://www.endangerdev.blogspot.com">link to my blogger blog</a> and the page is embedded bellow. I dont update it often but its better than 
+    nothing.
+</p>
+<div>
+    <iframe src="http://www.endangerdev.blogspot.com"></iframe>
+</div>

@@ -1,0 +1,43 @@
+﻿.portfolioSection {
+    height: 300px;
+    width: 450px;
+    float: left;
+    margin: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+            
+div.caption{
+    height: 54px; 
+    background-color: #212962;
+    overflow: hidden;
+    text-align: center;
+    //padding-bottom: -50px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div.blankSpace{  
+	height:246px;  
+}
+
+h1 {
+    margin: 0px;
+    clear: both;
+}
+
+p {
+    text-align: center;
+}
+p#outro {
+    clear: both;
+}
+div#sections div.portfolioSection h1{
+    color: #3B5F92; 
+}
+div#main div#sections div.portfolioSections div.blankSpace div.caption {
+    font-style: normal;
+}

@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="endamccormackModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="endamccormackEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Administrators" EntityType="endamccormackModel.Administrator" />
+    <EntitySet Name="aspnet_Applications" EntityType="endamccormackModel.aspnet_Applications" />
+    <EntitySet Name="aspnet_Membership" EntityType="endamccormackModel.aspnet_Membership" />
+    <EntitySet Name="aspnet_Paths" EntityType="endamccormackModel.aspnet_Paths" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="endamccormackModel.aspnet_PersonalizationAllUsers" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="endamccormackModel.aspnet_PersonalizationPerUser" />
+    <EntitySet Name="aspnet_Profile" EntityType="endamccormackModel.aspnet_Profile" />
+    <EntitySet Name="aspnet_Roles" EntityType="endamccormackModel.aspnet_Roles" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="endamccormackModel.aspnet_SchemaVersions" />
+    <EntitySet Name="aspnet_Users" EntityType="endamccormackModel.aspnet_Users" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="endamccormackModel.aspnet_WebEvent_Events" />
+    <EntitySet Name="Comments" EntityType="endamccormackModel.Comment" />
+    <EntitySet Name="PortfolioFiles" EntityType="endamccormackModel.PortfolioFile" />
+    <EntitySet Name="PortfolioLinks" EntityType="endamccormackModel.PortfolioLink" />
+    <EntitySet Name="PortfolioPosts" EntityType="endamccormackModel.PortfolioPost" />
+    <EntitySet Name="PortfolioProjectTypes" EntityType="endamccormackModel.PortfolioProjectType" />
+    <EntitySet Name="PortfolioTags" EntityType="endamccormackModel.PortfolioTag" />
+    <EntitySet Name="Posts" EntityType="endamccormackModel.Post" />
+    <EntitySet Name="Tags" EntityType="endamccormackModel.Tag" />
+    <EntitySet Name="TutorialComments" EntityType="endamccormackModel.TutorialComment" />
+    <EntitySet Name="TutorialPosts" EntityType="endamccormackModel.TutorialPost" />
+    <EntitySet Name="TutorialTags" EntityType="endamccormackModel.TutorialTag" />
+    <AssociationSet Name="FK__aspnet_Me__Appli__21B6055D" Association="endamccormackModel.FK__aspnet_Me__Appli__21B6055D">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__5AEE82B9" Association="endamccormackModel.FK__aspnet_Pa__Appli__5AEE82B9">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__440B1D61" Association="endamccormackModel.FK__aspnet_Ro__Appli__440B1D61">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__0DAF0CB0" Association="endamccormackModel.FK__aspnet_Us__Appli__0DAF0CB0">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="endamccormackModel.FK__aspnet_Me__UserI__22AA2996">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__628FA481" Association="endamccormackModel.FK__aspnet_Pe__PathI__628FA481">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__68487DD7" Association="endamccormackModel.FK__aspnet_Pe__PathI__68487DD7">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__693CA210" Association="endamccormackModel.FK__aspnet_Pe__UserI__693CA210">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__38996AB5" Association="endamccormackModel.FK__aspnet_Pr__UserI__38996AB5">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Posts" Association="endamccormackModel.FK_Comments_Posts">
+      <End Role="Posts" EntitySet="Posts" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TutorialComments_Posts" Association="endamccormackModel.FK_TutorialComments_Posts">
+      <End Role="TutorialPosts" EntitySet="TutorialPosts" />
+      <End Role="TutorialComments" EntitySet="TutorialComments" />
+    </AssociationSet>
+    <AssociationSet Name="aspnet_UsersInRoles" Association="endamccormackModel.aspnet_UsersInRoles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="PortfolioPostsFiles" Association="endamccormackModel.PortfolioPostsFiles">
+      <End Role="PortfolioFiles" EntitySet="PortfolioFiles" />
+      <End Role="PortfolioPosts" EntitySet="PortfolioPosts" />
+    </AssociationSet>
+    <AssociationSet Name="PortfolioPostsLinks" Association="endamccormackModel.PortfolioPostsLinks">
+      <End Role="PortfolioPosts" EntitySet="PortfolioPosts" />
+      <End Role="PortfolioLinks" EntitySet="PortfolioLinks" />
+    </AssociationSet>
+    <AssociationSet Name="PortfolioPostsTags" Association="endamccormackModel.PortfolioPostsTags">
+      <End Role="PortfolioPosts" EntitySet="PortfolioPosts" />
+      <End Role="PortfolioTags" EntitySet="PortfolioTags" />
+    </AssociationSet>
+    <AssociationSet Name="PostsTags" Association="endamccormackModel.PostsTags">
+      <End Role="Posts" EntitySet="Posts" />
+      <End Role="Tags" EntitySet="Tags" />
+    </AssociationSet>
+    <AssociationSet Name="TutorialPostsTags" Association="endamccormackModel.TutorialPostsTags">
+      <End Role="TutorialPosts" EntitySet="TutorialPosts" />
+      <End Role="TutorialTags" EntitySet="TutorialTags" />
+    </AssociationSet>
+    <EntitySet Name="Skills" EntityType="endamccormackModel.Skill" />
+    <EntitySet Name="Contents" EntityType="endamccormackModel.Content" />
+    <EntitySet Name="Headers" EntityType="endamccormackModel.Header" />
+    <EntitySet Name="Subjects" EntityType="endamccormackModel.Subject" />
+    <AssociationSet Name="FK_Contents_Headers" Association="endamccormackModel.FK_Contents_Headers">
+      <End Role="Header" EntitySet="Headers" />
+      <End Role="Content" EntitySet="Contents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Headers_Subjects" Association="endamccormackModel.FK_Headers_Subjects">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="Header" EntitySet="Headers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="endamccormackModel.FK__aspnet_Me__Appli__21B6055D" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="endamccormackModel.FK__aspnet_Pa__Appli__5AEE82B9" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="endamccormackModel.FK__aspnet_Ro__Appli__440B1D61" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Users" Relationship="endamccormackModel.FK__aspnet_Us__Appli__0DAF0CB0" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="endamccormackModel.FK__aspnet_Me__Appli__21B6055D" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="endamccormackModel.FK__aspnet_Me__UserI__22AA2996" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="endamccormackModel.FK__aspnet_Pa__Appli__5AEE82B9" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="endamccormackModel.FK__aspnet_Pe__PathI__628FA481" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="endamccormackModel.FK__aspnet_Pe__PathI__68487DD7" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="endamccormackModel.FK__aspnet_Pe__PathI__628FA481" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="endamccormackModel.FK__aspnet_Pe__PathI__68487DD7" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Users" Relationship="endamccormackModel.FK__aspnet_Pe__UserI__693CA210" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Users" Relationship="endamccormackModel.FK__aspnet_Pr__UserI__38996AB5" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="endamccormackModel.FK__aspnet_Ro__Appli__440B1D61" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="endamccormackModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="endamccormackModel.FK__aspnet_Us__Appli__0DAF0CB0" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="endamccormackModel.FK__aspnet_Me__UserI__22AA2996" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="endamccormackModel.FK__aspnet_Pe__UserI__693CA210" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_Profile" Relationship="endamccormackModel.FK__aspnet_Pr__UserI__38996AB5" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="endamccormackModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventCode" Type="Int32" Nullable="false" />
+    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="RequestUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ExceptionType" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PostID" Type="Int32" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Post" Relationship="endamccormackModel.FK_Comments_Posts" FromRole="Comments" ToRole="Posts" />
+  </EntityType>
+  <EntityType Name="PortfolioFile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Link" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PortfolioPosts" Relationship="endamccormackModel.PortfolioPostsFiles" FromRole="PortfolioFiles" ToRole="PortfolioPosts" />
+  </EntityType>
+  <EntityType Name="PortfolioLink">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Link" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PortfolioPosts" Relationship="endamccormackModel.PortfolioPostsLinks" FromRole="PortfolioLinks" ToRole="PortfolioPosts" />
+  </EntityType>
+  <EntityType Name="PortfolioPost">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ProjTypeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PortfolioFiles" Relationship="endamccormackModel.PortfolioPostsFiles" FromRole="PortfolioPosts" ToRole="PortfolioFiles" />
+    <NavigationProperty Name="PortfolioLinks" Relationship="endamccormackModel.PortfolioPostsLinks" FromRole="PortfolioPosts" ToRole="PortfolioLinks" />
+    <NavigationProperty Name="PortfolioTags" Relationship="endamccormackModel.PortfolioPostsTags" FromRole="PortfolioPosts" ToRole="PortfolioTags" />
+  </EntityType>
+  <EntityType Name="PortfolioProjectType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PortfolioTag">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PortfolioPosts" Relationship="endamccormackModel.PortfolioPostsTags" FromRole="PortfolioTags" ToRole="PortfolioPosts" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Comments" Relationship="endamccormackModel.FK_Comments_Posts" FromRole="Posts" ToRole="Comments" />
+    <NavigationProperty Name="Tags" Relationship="endamccormackModel.PostsTags" FromRole="Posts" ToRole="Tags" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Posts" Relationship="endamccormackModel.PostsTags" FromRole="Tags" ToRole="Posts" />
+  </EntityType>
+  <EntityType Name="TutorialComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PostID" Type="Int32" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TutorialPost" Relationship="endamccormackModel.FK_TutorialComments_Posts" FromRole="TutorialComments" ToRole="TutorialPosts" />
+  </EntityType>
+  <EntityType Name="TutorialPost">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TutorialComments" Relationship="endamccormackModel.FK_TutorialComments_Posts" FromRole="TutorialPosts" ToRole="TutorialComments" />
+    <NavigationProperty Name="TutorialTags" Relationship="endamccormackModel.TutorialPostsTags" FromRole="TutorialPosts" ToRole="TutorialTags" />
+  </EntityType>
+  <EntityType Name="TutorialTag">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TutorialPosts" Relationship="endamccormackModel.TutorialPostsTags" FromRole="TutorialTags" ToRole="TutorialPosts" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__21B6055D">
+    <End Role="aspnet_Applications" Type="endamccormackModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="endamccormackModel.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__5AEE82B9">
+    <End Role="aspnet_Applications" Type="endamccormackModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="endamccormackModel.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__440B1D61">
+    <End Role="aspnet_Applications" Type="endamccormackModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="endamccormackModel.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__0DAF0CB0">
+    <End Role="aspnet_Applications" Type="endamccormackModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="endamccormackModel.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__22AA2996">
+    <End Role="aspnet_Users" Type="endamccormackModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="endamccormackModel.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__628FA481">
+    <End Role="aspnet_Paths" Type="endamccormackModel.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="endamccormackModel.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__68487DD7">
+    <End Role="aspnet_Paths" Type="endamccormackModel.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="endamccormackModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__693CA210">
+    <End Role="aspnet_Users" Type="endamccormackModel.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="endamccormackModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__38996AB5">
+    <End Role="aspnet_Users" Type="endamccormackModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="endamccormackModel.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Posts">
+    <End Role="Posts" Type="endamccormackModel.Post" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Comments" Type="endamccormackModel.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Posts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TutorialComments_Posts">
+    <End Role="TutorialPosts" Type="endamccormackModel.TutorialPost" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TutorialComments" Type="endamccormackModel.TutorialComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TutorialPosts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TutorialComments">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aspnet_UsersInRoles">
+    <End Role="aspnet_Roles" Type="endamccormackModel.aspnet_Roles" Multiplicity="*" />
+    <End Role="aspnet_Users" Type="endamccormackModel.aspnet_Users" Multiplicity="*" />
+  </Association>
+  <Association Name="PortfolioPostsFiles">
+    <End Role="PortfolioFiles" Type="endamccormackModel.PortfolioFile" Multiplicity="*" />
+    <End Role="PortfolioPosts" Type="endamccormackModel.PortfolioPost" Multiplicity="*" />
+  </Association>
+  <Association Name="PortfolioPostsLinks">
+    <End Role="PortfolioPosts" Type="endamccormackModel.PortfolioPost" Multiplicity="*" />
+    <End Role="PortfolioLinks" Type="endamccormackModel.PortfolioLink" Multiplicity="*" />
+  </Association>
+  <Association Name="PortfolioPostsTags">
+    <End Role="PortfolioPosts" Type="endamccormackModel.PortfolioPost" Multiplicity="*" />
+    <End Role="PortfolioTags" Type="endamccormackModel.PortfolioTag" Multiplicity="*" />
+  </Association>
+  <Association Name="PostsTags">
+    <End Role="Posts" Type="endamccormackModel.Post" Multiplicity="*" />
+    <End Role="Tags" Type="endamccormackModel.Tag" Multiplicity="*" />
+  </Association>
+  <Association Name="TutorialPostsTags">
+    <End Role="TutorialPosts" Type="endamccormackModel.TutorialPost" Multiplicity="*" />
+    <End Role="TutorialTags" Type="endamccormackModel.TutorialTag" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Body" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Code" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MoreInfo" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="hasCode" Nullable="false" />
+    <Property Type="Boolean" Name="hasLooksLike" Nullable="false" />
+    <Property Type="Boolean" Name="hasMoreInfo" Nullable="false" />
+    <Property Type="Int32" Name="headerId" />
+    <NavigationProperty Name="Header" Relationship="endamccormackModel.FK_Contents_Headers" FromRole="Content" ToRole="Header" />
+  </EntityType>
+  <EntityType Name="Header">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Header1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="subjectID" />
+    <NavigationProperty Name="Contents" Relationship="endamccormackModel.FK_Contents_Headers" FromRole="Header" ToRole="Content" />
+    <NavigationProperty Name="Subject" Relationship="endamccormackModel.FK_Headers_Subjects" FromRole="Header" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="subject1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Headers" Relationship="endamccormackModel.FK_Headers_Subjects" FromRole="Subject" ToRole="Header" />
+  </EntityType>
+  <Association Name="FK_Contents_Headers">
+    <End Type="endamccormackModel.Header" Role="Header" Multiplicity="0..1" />
+    <End Type="endamccormackModel.Content" Role="Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Header">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Content">
+        <PropertyRef Name="headerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Headers_Subjects">
+    <End Type="endamccormackModel.Subject" Role="Subject" Multiplicity="0..1" />
+    <End Type="endamccormackModel.Header" Role="Header" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Header">
+        <PropertyRef Name="subjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

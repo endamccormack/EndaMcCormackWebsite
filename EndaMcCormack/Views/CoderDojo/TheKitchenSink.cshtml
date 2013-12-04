@@ -1,0 +1,20 @@
+﻿@model IEnumerable<EndaMcCormack.Models.Header>
+
+@{
+    ViewBag.Title = "TheKitchenSink";
+    Layout = "~/Views/Shared/_CoderDojo.cshtml";
+}
+
+            <center><img style="width:100px;" src="../../Content/Images/CoderDojo/coder-dojo-sligo.png" /></center>
+			<p class="header1">Welcome to the Kitchen Sink</p>
+			<p style="text-align: center;">This is pretty much everything thats important in standard HTML even <a href="http://idioms.thefreedictionary.com/everything+but+the+kitchen+sink">the kitchen sink</a></p>
+
+			<!-- This is a comment -->
+			<!-- This is where the real coding starts -->
+			
+            <p class="header3">Click bullet point to expand</p>
+
+
+@foreach (var item in Model) {
+        @CoderDojoContentHelper.Render(item, Html, Session["CoderDojo"] as string);
+    }

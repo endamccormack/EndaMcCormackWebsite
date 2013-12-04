@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Contact - The Endangered Droid - Enda Mc Cormack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string valid = ViewBag.InValid;
+}
+@section ContactCss
+{
+    <link rel="stylesheet" type="text/css" href="@Href("~/Content/css/contact.css")" />
+    <script type="text/javascript" src="@Href("~/Scripts/js/validateContact.js")"></script>
+}
+
+<h1>Contact</h1>
+                        <div class="socialIcons" style="float: left;">
+                            <a class="nonJsLink" href="http://www.linkedin.com/pub/enda-mc-cormack/31/2a1/7b6" target="_blank"><img class="link nonJsLink" alt="link to my LinkedIn" src="Content/Images/endamccormack/contactImages/linkedInRound.png" /></a>
+                            <a class="nonJsLink" href="https://twitter.com/EndaMcCormack" target="_blank"><img class="link nonJsLink" alt="link to my Twitter"  src="Content/Images/endamccormack/contactImages/twitterRound.png" /></a>
+                        </div>
+                        <div id="formDiv" style="float: left;">
+                            <form method="POST"> 
+                                @if(valid != null){<span style="color: red;">Please make sure the values you have entered are correct and try again</span>}
+                                    <table>
+                                        <tr>
+				                            <td class="label"><label>First name:</label></td>
+				                            <td><input type="text" name="fName" id="fName"  class="textfield" /></td>
+				                            <td><span class="validate" id="fNameRequired">*</span><span class="validateDesc" id="fNameDesc">Required</span></td>
+                                        </tr>
+
+                                        <tr>
+				                            <td class="label"><label>Last name:</label></td>
+				                            <td><input type="text" name="lName" id="lName"  class="textfield" /></td>
+				                            <td><span class="validate" id="lNameRequired">*</span><span class="validateDesc" id="lNameDesc">Required</span></td>
+                                        </tr>
+
+                                        <tr>
+				                            <td class="label"><label>Email:</label></td>
+				                            <td><input class="textfield" id="email" name="email" type="text" /></td>
+				                            <td><span class="validate" id="emailRequired">*</span><span class="validateDesc" id="emailDesc">Must match</span></td>
+                                        </tr>
+
+                                        <tr>
+				                            <td class="label" ><label style="margin-top: 0px;">Verrify email:</label></td>
+				                            <td><input type="text"  id="emailVer"  class="textfield" /></td>
+				                            <td><span class="validate" id="emailVerRequired">*</span><span class="validateDesc" id="emailVerDesc">Required</span></td>
+                                        </tr>
+                                        <tr>
+				                            <td class="label" ><label style="margin-top: 0px;">Phone:</label></td>
+				                            <td><input class="textfield" id="phone" name="phone" type="text" /></td>
+				                            <td><span class="validate" id="phoneDesc"></span></td>
+                                        </tr>
+                                        <tr>
+				                            <td class="label"><label>Your message:</label></td>
+				                            <td colspan="2"><span class="validate">*</span><span class="validateDesc" id="messageDesc">Required</span></td> 
+                                        </tr>
+                                        <tr><td colspan="2"><textarea name="message" class="textfield" rows="6" cols="30" id="message"> Type comments here.</textarea></td></tr>
+
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align: right;">
+                                                <input type="submit" id="submit" name="submit" value="Submit"/>
+                                                <input type="hidden" id="IsValid" name="IsValid" value="false"/>
+                                                <input type="reset" />
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
+                               
+                            </form>
+                        </div>
+                        <div class="socialIcons" style="float: left;">
+                            <tr><td><a href="http://www.facebook.com/enda.mccormack" class="nonJsLink" target="_blank"><img class="link nonJsLink" alt="link to my Facebook" src="Content/Images/endamccormack/contactImages/facebookRound.png"  /></a></td></tr>
+                            <tr><td><a href="https://plus.google.com/104983373362997739840/posts" class="nonJsLink" target="_blank"><img class="link nonJsLink" alt="linke to my Google+" src="Content/Images/endamccormack/contactImages/gPlusRound.png"/></a></td></tr>
+                        </div>
+                        
+                        <p style="clear: both; padding-top: 40px; text-align: center;">Feel free to contact me at any time.</p>

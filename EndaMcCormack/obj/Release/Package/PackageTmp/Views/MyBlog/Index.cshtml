@@ -1,0 +1,34 @@
+﻿@using EndaMcCormack.Models;
+@model IEnumerable<Post>
+@{  
+    ViewBag.Title = "Blog - The Endangered Droid - Enda Mc Cormack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isPreviousLinkVisible = ViewBag.isPreviousLinkVisible ?? false;
+    bool isNextLinkVisible = ViewBag.isNextLinkVisible ?? false;
+    bool isAdmin = ViewBag.IsAdmin ?? false;
+}
+
+@section PostsCss
+{
+    <link rel="stylesheet" type="text/css" href="@Href("~/Content/css/posts.css")" />
+}
+
+
+<h1>Blog</h1>
+<p style="text-align: center">For a time before my website here is a <a href="http://www.endangerdev.blogspot.com">link to my blogger blog</a>.
+</p>
+
+@foreach (Post p in Model)
+{
+    @PostHelper.Render(p, Html, isAdmin, false);
+}
+
+@if(isPreviousLinkVisible)
+{
+    <a id="previousLink" href="@Href("~/MyBlog/Index/"+ (ViewBag.pageNumber - 1))">&lt;&lt; Previous</a> 
+}
+
+@if (isNextLinkVisible)
+{
+    <a id="nextLink" href="@Href("~/MyBlog/Index/"+ (ViewBag.pageNumber + 1))">Next&gt;&gt;</a> 
+}

@@ -1,0 +1,117 @@
+﻿@using EndaMcCormack.Models;
+@model IEnumerable<Skill>
+
+@{
+    ViewBag.Title = "Home - The Endangered Droid - Enda Mc Cormack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isAdmin = ViewBag.IsAdmin ?? false;
+}
+
+@section HomeCss
+{
+    <link rel="stylesheet" type="text/css" href="@Href("~/Content/css/home.css")" />
+}
+<h1>Welcome to The Endangered Droid</h1>
+@if (isAdmin == true)
+{
+    <h1>LOGGED IN</h1>
+}
+                 
+                     <p style="margin-right: 10px; margin-left: 10px; text-align: center;">
+                            Hi there, my name is Enda Mc Cormack and you are welcome to my personal website, here you can find things 
+                                    like details about me and the stuff I am working on, some of my thoughts, views and keeping up 
+                                    to date with me via my <a href="/MyBlog">blog</a>, my <a href="/Portfolio">Portfolio</a> 
+                                    of work done, I hope to put up some <a href="/Tutorials">Tutorials</a> when I get some time, 
+                                    and finally of course a <a href="/Contact">Contact</a> in case anyone needs to get in 
+                                    contact with me.
+                        </p>
+                        <div id="columns">
+                            <div class="aColumn" id="column1">
+                                <center><img src="Content/Images/endamccormack/me.png" /></center>
+                                <h3>ME, MYSELF AND I</h3>
+                                <p>My name is Enda Mc Cormack, I come from a small town in Ireland called Riverstown, County Sligo, 
+                                   which is on the west coast for those who don't know,<a class="nonJsLink" href="/Content/Images/endamccormack/me/2c8058a.jpg"
+                                    style="width:50%; float:  left; margin: 5px; margin-left: 0px;" 
+                                    rel="lightbox[me]" title="Me"> <img  style="width:100%; border: 2px solid #212962; margin: 0px;" 
+                                         rel="lightbox" alt="picture of me Enda Mc Cormack" src="Content/Images/endamccormack/me.jpg" />
+                                       <span style="color:#212962; text-align:center; margin-top: 2px;">Some pictures</span>
+                                                                                       </a>
+                                    <a href="/Content/Images/endamccormack/me/IMG_20120717_171916.jpg" rel="lightbox[me]" title="Me"></a>
+                                    <a href="/Content/Images/endamccormack/me/DSCN0536.JPG" rel="lightbox[me]" title="Me"></a>
+                                    <a href="/Content/Images/endamccormack/me/Enda%20on%20wall.jpg" rel="lightbox[me]" title="Me"></a>
+                                    <a href="/Content/Images/endamccormack/me/IMG_20120713_220803.jpg" rel="lightbox[me]" title="Me"></a>
+
+                                   it is the most beautiful place in Ireland in my view and I always miss it when I leave. I come 
+                                   from humble beginnings and was brought up with a mentality for the importance a hard day's work.
+                                   I've been described as proactive, ambitious, creative, learn quickly, flexible, smart and a good 
+                                   leader.
+                                </p>
+                            </div>
+                            
+
+                            <div class="aColumn" id="column2">
+                                <center><img src="Content/Images/endamccormack/workAndCollege.png" /></center>
+                                <h3>COLLEGE AND WORK</h3>
+                                <p>I am a student at the Institute of Technology, Sligo studying Software Engineer. I maintain a 1.1 average across every
+                                     year even non degree years. In college I maintain being a class representative for Software 
+                                    Engineering in the Institute of Technology Sligo Students Union and I am on the student council.
+                                </p>
+        
+                                <p>Currently I am a Placement Software Engineer at a brilliant company called <a href="http://www.Kainos.com">Kainos Software Ltd</a>
+                                    in Belfast, Northern Ireland. I am insanely proud to work for such a reputable, thriving company that work's
+                                    primarily on applications of varying sizes for the health, financial and public sector's in the UK and the Republic of Ireland.
+                                </p>
+
+                                
+                            </div>
+                            <div class="aColumn" id="column3">
+                                <center><img src="Content/Images/endamccormack/work.png" /></center>
+                                <h3>OUTSIDE OF THOSE</h3>
+                                <p>
+                                As for me, I am a tech mad uber nerd. Most of my interests revolve around tech, most of which is computing. My main interests in tech 
+                                is the web and software engineering, that being said I am rather varied, I try to be flexible and be an all in one developer, I jump 
+                                from programming to graphics design, to web, to layouts, to computer hardware and systems, and databases. My main interests at the moment 
+                                is certainly the web, its growing to be so dynamic and with the development of HTML5 and JavaScript whatever you can build for an operating 
+                                system you can now build for the web and easily have to truly cross platform project without sacrificing much of the powerful things you can do natively.
+                                </p>
+                            </div>
+                        </div>  
+                            
+                        <div id="skillDiv">
+                        <center><img src="Content/Images/endamccormack/hammer.png" /></center>
+                        <h3>SKILLS</h3>
+                        So some of the technologies I know, this can be a difficult list to compile because as I learn so many different things I know some things 
+                        about a lot of languages and only specialize in a small handful. Short list of my best for each supported platform which I think represents 
+                        me pretty well would be: (Roll over to see more details)
+                        </div>
+                        @if (isAdmin)
+                        {
+                            @Html.ActionLink("Add a skill", "AddSkill"); <br />
+                        }
+                        
+                        @foreach (Skill s in Model)
+                        {
+
+                            string theSkill = "skill" + s.ID;
+                            string theSkillContent = "skill" + s.ID + "Content";
+                            
+                            <div class="skill" id="@theSkill">
+                            <br />
+                            <ul><li>
+                            @s.Name
+                            </li></ul>
+                           
+                            
+                        </div>
+                            <p class="skillProp" id="@theSkillContent">    
+                                @s.Body
+                            </p>
+
+                        }
+                        <br />
+                       
+                        <br />
+                        <p class="noneFloat">
+                        Thanks for visiting, look around and don't hesitate to contact me if you have any queries.
+                        </p>
+                        <p  style="clear: both;"/>

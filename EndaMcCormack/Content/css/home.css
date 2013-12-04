@@ -1,0 +1,83 @@
+﻿
+.skill
+{
+    display: inline-block;
+    color: white;
+    clear: both;
+    
+}
+.skillProp {
+	color: White;
+	display: none;
+	position: absolute;
+	background: #212962;
+	padding: 10px;
+	-moz-box-shadow: 7px 7px 15px #000;
+	-webkit-box-shadow: 7px 7px 15px #000;
+	box-shadow: 7px 7px 15px #000;
+    margin: 0px;
+    width: 100%
+
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	
+	
+}
+#skillDiv {
+    clear: both;
+    display: block;
+}
+.hide {
+	height: 0%;
+	width:0%;
+}
+.skill ul {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.skill ul li
+{
+
+    font-size: 22px;
+    font-weight: bold; 
+    cursor: help;
+    
+    background-color: #212962;
+    
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    
+    //list-style-image:url(../Images/endamccormack/bullet-robo-head.gif);
+    list-style: none;
+    
+    -moz-box-shadow: 7px 7px 15px #000;
+	-webkit-box-shadow: 7px 7px 15px #000;
+	box-shadow: 3px 3px 5px #000;
+
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+    
+
+.aColumn
+{
+  width:30%;   
+  margin:12px;
+}
+#column1
+{
+   float:left; 
+}
+#column2
+{
+   float:left; 
+}
+#column3
+{
+    float:left;
+}

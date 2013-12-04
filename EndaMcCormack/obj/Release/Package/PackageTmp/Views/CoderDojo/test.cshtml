@@ -1,0 +1,30 @@
+﻿@model IEnumerable<EndaMcCormack.Models.Header>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>test</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table>
+        <tr>
+            <th>
+                Header1
+            </th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        @CoderDojoContentsHelper.Render(item, Html);
+    }
+    
+    </table>
+</body>
+</html>
